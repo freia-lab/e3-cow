@@ -90,3 +90,7 @@ $(TMPS):
 
 .PHONY: vlibs
 vlibs:
+
+prebuild:
+	@echo ">>> This is the prebuild target <<<"
+	@make Db/cernox-breaktables.dbd

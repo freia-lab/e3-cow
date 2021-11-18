@@ -1,23 +1,10 @@
-EXCLUDE_ARCHS += eldk
-EXCLUDE_VERSIONS += 3.14
-
-MAGLPSLOC:=.
-export MAGLPSLOC
-
-include $(EPICS_ENV_PATH)/module.Makefile
-
-PROJECT = ioc_cow_freia
-
-#USR_DEPENDENCIES += autosave
-#USR_DEPENDENCIES += asyn,konrad
-
-SOURCES = -none-
-
-STARTUPS = $(wildcard startup/*.cmd)
-
-MISCS = $(AUTOMISCS)
-
 OPIS = opi
+OPIS_VERSION = 0.1.0
+OPIS_HOME = /opt/epics/OPIS
+OPI_NAME = CoW
 
-calibration : ./calibrations/*.fic ./tools/ficFileConv
+Db/cernox-breaktables.dbd : ./calibrations/*.fic ./tools/ficFileConv
 	./tools/ficFileConv
+
+opiinstall:
+	@rsync -va $(OPIS)/ $(OPIS_HOME)/$(OPI_NAME)/$(OPIS_VERSION)/

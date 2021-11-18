@@ -34,6 +34,7 @@
     <pv_name>$(PREFIX)$(SUBS):$(D)</pv_name>
     <x>90</x>
     <y>10</y>
+    <format>5</format>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
