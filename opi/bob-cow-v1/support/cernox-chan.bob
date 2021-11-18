@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <width>350</width>
+  <height>40</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(TT):</text>
+    <x>10</x>
+    <y>10</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(PREFIX)-$(SUBS):$(TT):sRdV</pv_name>
+    <x>110</x>
+    <y>10</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(PREFIX)-$(SUBS):$(TT):sFlt</pv_name>
+    <x>70</x>
+    <y>10</y>
+    <off_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ERROR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PREFIX)-$(SUBS):$(TT)-R:sRdV</pv_name>
+    <x>240</x>
+    <y>10</y>
+  </widget>
+</display>

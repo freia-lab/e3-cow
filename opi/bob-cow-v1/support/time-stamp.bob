@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Timestamp</name>
+  <width>470</width>
+  <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_196</name>
+    <text>$(SGNL)</text>
+    <y>5</y>
+    <width>220</width>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_34</name>
+    <pv_name>$(PREFIX)$(SUBS):$(SGNL)-INT-RB</pv_name>
+    <x>240</x>
+    <y>5</y>
+    <width>21</width>
+    <off_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>timestamp_read</name>
+    <text>######</text>
+    <x>280</x>
+    <y>5</y>
+    <width>175</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="../scripts/formatTime.py">
+        <pv_name>$(PREFIX)$(SUBS):$(SGNL)-TMSTMP-RB</pv_name>
+      </script>
+    </scripts>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+</display>

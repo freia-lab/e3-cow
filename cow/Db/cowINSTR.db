@@ -1,0 +1,3735 @@
+record(bi, "$(PREFIX):INSTR-CONN") {
+        field(DTYP, "S7plc stat")
+  	field(INP,  "@PLCINSTR")
+  	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+	field(ONAM, "Connected")
+}
+record(ai, "$(PREFIX)-LHe:TT642-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT642-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT642:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT642-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121480 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT642-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT642:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT642:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121480")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT642-R:sTmp MS")
+   field (LINR, "CX_LS_X121480")
+   info("cf:test", "testing")
+   info(properties, "hello=world")
+}
+
+record(ai, "$(PREFIX)-LHe:TT740-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+4 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT740-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT740:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT740-R:sTmp") {
+  field (DESC,"Cernox pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT740-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT740:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT740:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT740-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT644-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+8 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT644-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT644:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT644-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X107710 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT644-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT644:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT644:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X107710")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT644-R:sTmp MS")
+   field (LINR, "CX_LS_X107710")
+}
+
+record(ai, "$(PREFIX)-LHe:TT645-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+12 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT645-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT645:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT645-R:sTmp") {
+  field (DESC,"Cernox NO CONVERSION R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT645-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT645:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT645:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor NO CONVERSION")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT645-R:sTmp MS")
+   field (LINR, "NO CONVERSION")
+}
+
+record(ai, "$(PREFIX)-LHe:TT641B-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+16 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT641B-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT641B:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT641B-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT641B-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT641B:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT641B:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT641B-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT641C-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+20 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT641C-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT641C:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT641C-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT641C-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT641C:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT641C:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT641C-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT675-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+24 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT675-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT675:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT675-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121509 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT675-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT675:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT675:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121509")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT675-R:sTmp MS")
+   field (LINR, "CX_LS_X121509")
+}
+
+record(ai, "$(PREFIX)-LHe:TT676-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+28 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT676-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT676:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT676-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121486 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT676-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT676:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT676:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121486")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT676-R:sTmp MS")
+   field (LINR, "CX_LS_X121486")
+}
+
+record(ai, "$(PREFIX)-LHe:TT677-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+32 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT677-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT677:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT677-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X103358 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT677-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT677:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT677:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X103358")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT677-R:sTmp MS")
+   field (LINR, "CX_LS_X103358")
+}
+
+record(ai, "$(PREFIX)-LHe:TT678-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+36 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT678-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT678:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT678-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121508 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT678-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT678:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT678:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121508")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT678-R:sTmp MS")
+   field (LINR, "CX_LS_X121508")
+}
+
+record(ai, "$(PREFIX)-LHe:TT679-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+40 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT679-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT679:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT679-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121521 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT679-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT679:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT679:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121521")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT679-R:sTmp MS")
+   field (LINR, "CX_LS_X121521")
+}
+
+record(ai, "$(PREFIX)-LHe:TT680-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+44 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT680-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT680:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT680-R:sTmp") {
+  field (DESC,"Cernox CX_LS_X121519 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT680-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT680:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT680:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC,"Cernox sensor CX_LS_X121519")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "1.5")
+   field (HOPR, "310")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT680-R:sTmp MS")
+   field (LINR, "CX_LS_X121519")
+}
+
+record(ai, "$(PREFIX)-LHe:TT745-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+48 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT745-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT745:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT745-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT745-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT745:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT745:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT745-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT749-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+52 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT749-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT749:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT749-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT749-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT749:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT749:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT749-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT751-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+56 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT751-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT751:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT751-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT751-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT751:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT751:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT751-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+record(ai, "$(PREFIX)-LHe:TT753-R:sRdV") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/0+60 T=FLOAT")
+  field(PREC, "3")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+  field(EGU, "Ω")
+  field (FLNK, "$(PREFIX)-LHe:TT753-R:sTmp")
+  field(SDIS, "$(PREFIX)-LHe:TT753:sRdV-stat.VAL NPP MS")
+  field(DISV, "-1") # Will never disable, but will propagate severity
+}
+record(calc,"$(PREFIX)-LHe:TT753-R:sTmp") {
+  field (DESC," pt100 R[mΩ]")
+  field (INPA, "$(PREFIX)-LHe:TT753-R:sRdV MS")
+  field (CALC, "1000.0*A")
+  field (EGU, "mΩ")
+  field (FLNK, "$(PREFIX)-LHe:TT753:sRdV")
+}
+record(ai, "$(PREFIX)-LHe:TT753:sRdV") {
+   field (DTYP,"Raw Soft Channel")
+   field (DESC," sensor pt100")
+   field (EGU, "K")
+   field(PREC, "3")
+   field (LOPR, "70")
+   field (HOPR, "400")
+   field (SCAN, "Passive")
+   field (INP,"$(PREFIX)-LHe:TT753-R:sTmp MS")
+   field (LINR, "pt100")
+}
+
+# Fault bits (for GUI and for status propagation)
+#
+record(bi, "$(PREFIX)-LHe:TT642:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=0")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT740:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=1")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT644:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=2")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT645:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=3")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT641B:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=4")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT641C:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=5")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT675:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=6")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT676:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=7")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT677:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=0")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT678:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=1")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT679:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=2")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT680:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=3")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT745:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=4")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT749:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=5")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT751:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=6")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+record(bi, "$(PREFIX)-LHe:TT753:sFlt") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=7")
+   field(SCAN, "I/O Intr")
+   field(ZNAM, "OK")
+   field(ONAM, "Err")
+   field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX)-LHe:TT642:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=0")
+   field(SCAN, "I/O Intr")
+  field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT740:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=1")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT644:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=2")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT645:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=3")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT641B:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=4")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT641C:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=5")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT675:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=6")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT676:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+66 T=BYTE B=7")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT677:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=0")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT678:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=1")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT679:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=2")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT680:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=3")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT745:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=4")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT749:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=5")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT751:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=6")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+record(bi, "$(PREFIX)-LHe:TT753:sRdV-stat") {
+   field(DTYP, "S7plc")
+   field(INP, "@PLCINSTR/0+70 T=BYTE B=7")
+   field(SCAN, "I/O Intr")
+   field(OSV, "INVALID")
+}
+## =======================================================================
+# 
+# L and K fields are used to force the sRdV-calc to 1 (when L=1)
+# or to 0 (when K=1). If both K and L = 1 the value is 0.
+# The K field has been added to CALC to handle the sensors that are 
+# known to be broken but the status bit from CABTF is ok.
+# The calc will be also set to 0 when the SEVR=2 and STAT=15 - value
+# outside the look-up table
+record(calc, "$(PREFIX)-LHe:TT642:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT642:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT642:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT642:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT642:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT642:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=8")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT642:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT740:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT740:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT740:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT740:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT740:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT740:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=9")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT740:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT644:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT644:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT644:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT644:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT644:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT644:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=10")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT644:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT645:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT645:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT645:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT645:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT645:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT645:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=11")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT645:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT641B:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT641B:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT641B:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT641B:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT641B:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT641B:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=12")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT641B:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT641C:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT641C:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT641C:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT641C:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT641C:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT641C:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=13")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT641C:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT675:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT675:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT675:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT675:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT675:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT675:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=14")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT675:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT676:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT676:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT676:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT676:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT676:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT676:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=15")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT676:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT677:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT677:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT677:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT677:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT677:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT677:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=0")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT677:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT678:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT678:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT678:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT678:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT678:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT678:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=1")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT678:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT679:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT679:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT679:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT679:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT679:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT679:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=2")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT679:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT680:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT680:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT680:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT680:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT680:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT680:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=3")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT680:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT745:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT745:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT745:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT745:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT745:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT745:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=4")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT745:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT749:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT749:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT749:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT749:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT749:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT749:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=5")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT749:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT751:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT751:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT751:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT751:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT751:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT751:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=6")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT751:sRdV-calc NPP")
+}
+
+record(calc, "$(PREFIX)-LHe:TT753:sRdV-calc") {
+  field (DESC,"Valid flag calulation")
+  field(SCAN, "10 second")
+  field (INPA, "$(PREFIX)-LHe:TT753:sRdV-stat.VAL NMS")
+  field (INPB, "$(PREFIX)-LHe:TT753:sRdV.SEVR NMS")
+  field (INPC, "$(PREFIX)-LHe:TT753:sRdV.STAT NMS")
+  field (CALC, "((A||(B==2&&C==15)?0:1)||L)&&!K")
+  field(FLNK, "$(PREFIX)-LHe:TT753:sRdV-valid")
+}
+
+record(bo, "$(PREFIX)-LHe:TT753:sRdV-valid") {
+  field (DESC,"Data valid")
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/60 T=WORD B=7")
+  field(PINI, "NO")
+  field(OMSL, "closed_loop")
+  field(ONAM, "Data valid")
+  field(ZNAM, "Data invalid")
+  field(DOL, "$(PREFIX)-LHe:TT753:sRdV-calc NPP")
+}
+
+record(bi, "$(PREFIX)-LHe:EH641AC:sAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72 T=BYTE B=0")
+  field(DESC, "LHe channel 1")
+  field(ZSV, "MINOR")
+  field(ONAM, "Auto")
+  field(ZNAM, "Manual")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH641AC:sTsw") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72 T=BYTE B=1")
+  field(DESC, "LHe channel 1")
+  field(OSV, "MAJOR")
+  field(ONAM, "Fault")
+  field(ZNAM, "OK")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH641AC:sCmd") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72 T=BYTE B=2")
+  field(DESC, "LHe channel 1")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH641AC:sCmdAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72 T=BYTE B=3")
+  field(DESC, "LHe channel 1")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH641AC:sHtrOn") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72 T=BYTE B=4")
+  field(DESC, "LHe channel 1")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(PREFIX)-LHe:EH641AC:sHL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72+2 T=FLOAT")
+  field(DESC, "LHe channel 1")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH641AC:sHL-cHL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH641AC:sHL-cHL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH641AC:sHL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH641AC:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cHL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH641AC:sHL-cHL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH641AC:sHL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH641AC:sAuto PP")
+#  field(CALC, "(B=0)?A:VAL")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cHL PP")
+}
+
+record(ai, "$(PREFIX)-LHe:EH641AC:sLL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/72+6 T=FLOAT")
+  field(DESC, "LHe channel 1")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH641AC:sLL-cLL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH641AC:sLL-cLL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH641AC:sLL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH641AC:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cLL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH641AC:sLL-cLL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH641AC:sLL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH641AC:sAuto PP")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cLL PP")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdAuto") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=0")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdAuto")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdMan") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=1")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdMan")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdSet") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=2")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdSet")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdRst") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=3")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdRst")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=4")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdHL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0 T=BYTE B=5")
+  field(DESC, "LHe channel 1")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdLL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdHL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cmdHL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH641AC:cmdLL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH641AC:cmdLL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(ao, "$(PREFIX)-LHe:EH641AC:cHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0+2 T=FLOAT")
+  field(DESC, "LHe channel 1")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH641AC:cmdHL-link")
+}
+
+
+record(ao, "$(PREFIX)-LHe:EH641AC:cLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/0+6 T=FLOAT")
+  field(DESC, "LHe channel 1")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH641AC:cmdLL-link")
+}
+
+
+record(bi, "$(PREFIX)-LHe:EH740:sAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82 T=BYTE B=0")
+  field(DESC, "LHe channel 0")
+  field(ZSV, "MINOR")
+  field(ONAM, "Auto")
+  field(ZNAM, "Manual")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH740:sTsw") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82 T=BYTE B=1")
+  field(DESC, "LHe channel 0")
+  field(OSV, "MAJOR")
+  field(ONAM, "Fault")
+  field(ZNAM, "OK")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH740:sCmd") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82 T=BYTE B=2")
+  field(DESC, "LHe channel 0")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH740:sCmdAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82 T=BYTE B=3")
+  field(DESC, "LHe channel 0")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH740:sHtrOn") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82 T=BYTE B=4")
+  field(DESC, "LHe channel 0")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(PREFIX)-LHe:EH740:sHL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82+2 T=FLOAT")
+  field(DESC, "LHe channel 0")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH740:sHL-cHL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH740:sHL-cHL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH740:sHL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH740:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH740:cHL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH740:sHL-cHL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH740:sHL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH740:sAuto PP")
+#  field(CALC, "(B=0)?A:VAL")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH740:cHL PP")
+}
+
+record(ai, "$(PREFIX)-LHe:EH740:sLL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/82+6 T=FLOAT")
+  field(DESC, "LHe channel 0")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH740:sLL-cLL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH740:sLL-cLL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH740:sLL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH740:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH740:cLL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH740:sLL-cLL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH740:sLL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH740:sAuto PP")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH740:cLL PP")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdAuto") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=0")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdAuto")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdMan") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=1")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdMan")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdSet") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=2")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdSet")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdRst") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=3")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdRst")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=4")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdHL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10 T=BYTE B=5")
+  field(DESC, "LHe channel 0")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdLL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdHL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH740:cmdHL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH740:cmdLL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH740:cmdLL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(ao, "$(PREFIX)-LHe:EH740:cHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10+2 T=FLOAT")
+  field(DESC, "LHe channel 0")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH740:cmdHL-link")
+}
+
+
+record(ao, "$(PREFIX)-LHe:EH740:cLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/10+6 T=FLOAT")
+  field(DESC, "LHe channel 0")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH740:cmdLL-link")
+}
+
+
+record(bi, "$(PREFIX)-LHe:EH742AC:sAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92 T=BYTE B=0")
+  field(DESC, "LHe channel 2")
+  field(ZSV, "MINOR")
+  field(ONAM, "Auto")
+  field(ZNAM, "Manual")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH742AC:sTsw") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92 T=BYTE B=1")
+  field(DESC, "LHe channel 2")
+  field(OSV, "MAJOR")
+  field(ONAM, "Fault")
+  field(ZNAM, "OK")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH742AC:sCmd") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92 T=BYTE B=2")
+  field(DESC, "LHe channel 2")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH742AC:sCmdAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92 T=BYTE B=3")
+  field(DESC, "LHe channel 2")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-LHe:EH742AC:sHtrOn") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92 T=BYTE B=4")
+  field(DESC, "LHe channel 2")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(PREFIX)-LHe:EH742AC:sHL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92+2 T=FLOAT")
+  field(DESC, "LHe channel 2")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH742AC:sHL-cHL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH742AC:sHL-cHL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH742AC:sHL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH742AC:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cHL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH742AC:sHL-cHL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH742AC:sHL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH742AC:sAuto PP")
+#  field(CALC, "(B=0)?A:VAL")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cHL PP")
+}
+
+record(ai, "$(PREFIX)-LHe:EH742AC:sLL") {
+  field(DTYP, "S7plc")
+  field(INP, "@PLCINSTR/92+6 T=FLOAT")
+  field(DESC, "LHe channel 2")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-LHe:EH742AC:sLL-cLL-link")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH742AC:sLL-cLL-link") {
+  field(INPA, "$(PREFIX)-LHe:EH742AC:sLL.VAL NPP")
+#  field(INPB, "$(PREFIX)-LHe:EH742AC:sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cLL PP")
+}
+
+record(calcout, "$(PREFIX)-LHe:EH742AC:sLL-cLL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-LHe:EH742AC:sLL.VAL PP")
+#  field(INPB, "$(PREFIX)-LHe:EH742AC:sAuto PP")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cLL PP")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdAuto") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=0")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdAuto")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdMan") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=1")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdMan")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdSet") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=2")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdSet")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdRst") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=3")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdRst")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=4")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdHL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20 T=BYTE B=5")
+  field(DESC, "LHe channel 2")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdLL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdHL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cmdHL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-LHe:EH742AC:cmdLL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-LHe:EH742AC:cmdLL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(ao, "$(PREFIX)-LHe:EH742AC:cHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20+2 T=FLOAT")
+  field(DESC, "LHe channel 2")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH742AC:cmdHL-link")
+}
+
+
+record(ao, "$(PREFIX)-LHe:EH742AC:cLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@PLCINSTR/20+6 T=FLOAT")
+  field(DESC, "LHe channel 2")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-LHe:EH742AC:cmdLL-link")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-ON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=0" )
+	field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-STARTED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=1" )
+	field(ZNAM, "STOPPED")
+        field(ONAM, "STARTED")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-STOPPED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):SOLENOID01-IREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=3" )
+}
+
+record(bi, "$(PREFIX):SOLENOID01-LOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=4" )
+	field(ZNAM, "LOC")
+        field(ONAM, "REM")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=5" )
+	field(ZNAM, "N-LTCH")
+        field(ONAM, "LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=6" )
+	field(ZNAM, "C-FRC")
+        field(ONAM, "N-FRC")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):SOLENOID01-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):SOLENOID01-FRC-INT")
+	field(ZNAM, "N-FRC")
+        field(ONAM, "FRCD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-SONST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):SOLENOID01-SONST-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-SIREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=4" )
+	field(FLNK, "$(PREFIX):SOLENOID01-SIREG-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-SFAULT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=5" )
+	field(FLNK, "$(PREFIX):SOLENOID01-SFAULT-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID01-SLOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+1 T=INT8 B=6" )
+	field(FLNK, "$(PREFIX):SOLENOID01-SLOCREM-INT")
+}
+
+record(longin, "$(PREFIX):SOLENOID01-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+2 T=BYTE" )
+}
+
+record(longin, "$(PREFIX):SOLENOID01-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+4 T=INT16" )
+}
+
+record(ai, "$(PREFIX):SOLENOID01-UPTIMENOHV-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+6 T=REAL32" )
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-VMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+10 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "V")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-IMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+14 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "A")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-VSVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID01-VSVAL-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-ISVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID01-ISVAL-INT")
+}
+
+# I - set-points
+record(ai, "$(PREFIX):SOLENOID01-ISP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+26 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID01-ISP1-INT")
+}
+
+# V - set-points
+record(ai, "$(PREFIX):SOLENOID01-VSP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+30 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID01-VSP1-INT")
+}
+
+# I - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID01-IHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+34 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID01-IHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-ILOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+38 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID01-ILOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-IHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+42 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID01-IHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-ILOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+46 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID01-ILOW-INT")
+}
+
+# V - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID01-VHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+50 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID01-VHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-VLOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+54 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID01-VLOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-VHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+58 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID01-VHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID01-VLOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+62 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID01-VLOW-INT")
+}
+
+# Time-stamp
+record(waveform, "$(PREFIX):SOLENOID01-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCINSTR/160+74 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+# Maximum current allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID01-IMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+82 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+}
+
+# Maximum voltage allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID01-VMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/160+86 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+}
+
+#Check this!!
+#V_EGU_SP	Real	66.0
+#I_EGU_SP	Real	70.0
+
+
+record(bi, "$(PREFIX):SOLENOID02-ON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=0" )
+	field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-STARTED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=1" )
+	field(ZNAM, "STOPPED")
+        field(ONAM, "STARTED")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-STOPPED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):SOLENOID02-IREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=3" )
+}
+
+record(bi, "$(PREFIX):SOLENOID02-LOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=4" )
+	field(ZNAM, "LOC")
+        field(ONAM, "REM")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=5" )
+	field(ZNAM, "N-LTCH")
+        field(ONAM, "LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=6" )
+	field(ZNAM, "C-FRC")
+        field(ONAM, "N-FRC")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):SOLENOID02-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):SOLENOID02-FRC-INT")
+	field(ZNAM, "N-FRC")
+        field(ONAM, "FRCD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-SONST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):SOLENOID02-SONST-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-SIREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=4" )
+	field(FLNK, "$(PREFIX):SOLENOID02-SIREG-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-SFAULT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=5" )
+	field(FLNK, "$(PREFIX):SOLENOID02-SFAULT-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID02-SLOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+1 T=INT8 B=6" )
+	field(FLNK, "$(PREFIX):SOLENOID02-SLOCREM-INT")
+}
+
+record(longin, "$(PREFIX):SOLENOID02-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+2 T=BYTE" )
+}
+
+record(longin, "$(PREFIX):SOLENOID02-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+4 T=INT16" )
+}
+
+record(ai, "$(PREFIX):SOLENOID02-UPTIMENOHV-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+6 T=REAL32" )
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-VMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+10 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "V")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-IMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+14 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "A")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-VSVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID02-VSVAL-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-ISVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID02-ISVAL-INT")
+}
+
+# I - set-points
+record(ai, "$(PREFIX):SOLENOID02-ISP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+26 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID02-ISP1-INT")
+}
+
+# V - set-points
+record(ai, "$(PREFIX):SOLENOID02-VSP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+30 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID02-VSP1-INT")
+}
+
+# I - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID02-IHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+34 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID02-IHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-ILOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+38 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID02-ILOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-IHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+42 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID02-IHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-ILOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+46 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID02-ILOW-INT")
+}
+
+# V - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID02-VHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+50 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID02-VHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-VLOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+54 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID02-VLOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-VHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+58 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID02-VHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID02-VLOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+62 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID02-VLOW-INT")
+}
+
+# Time-stamp
+record(waveform, "$(PREFIX):SOLENOID02-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCINSTR/250+74 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+# Maximum current allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID02-IMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+82 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+}
+
+# Maximum voltage allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID02-VMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/250+86 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+}
+
+#Check this!!
+#V_EGU_SP	Real	66.0
+#I_EGU_SP	Real	70.0
+
+
+record(bi, "$(PREFIX):SOLENOID03-ON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=0" )
+	field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-STARTED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=1" )
+	field(ZNAM, "STOPPED")
+        field(ONAM, "STARTED")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-STOPPED-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):SOLENOID03-IREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=3" )
+}
+
+record(bi, "$(PREFIX):SOLENOID03-LOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=4" )
+	field(ZNAM, "LOC")
+        field(ONAM, "REM")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-NLTCH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=5" )
+	field(ZNAM, "N-LTCH")
+        field(ONAM, "LTCHD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-NFRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=6" )
+	field(ZNAM, "C-FRC")
+        field(ONAM, "N-FRC")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-ISFRST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):SOLENOID03-WRN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=0" )
+	field(ZNAM, "OK")
+        field(ONAM, "WRN")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-INT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=1" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-FRC-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=2" )
+	field(FLNK, "$(PREFIX):SOLENOID03-FRC-INT")
+	field(ZNAM, "N-FRC")
+        field(ONAM, "FRCD")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-SONST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=3" )
+	field(FLNK, "$(PREFIX):SOLENOID03-SONST-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-SIREG-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=4" )
+	field(FLNK, "$(PREFIX):SOLENOID03-SIREG-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-SFAULT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=5" )
+	field(FLNK, "$(PREFIX):SOLENOID03-SFAULT-INT")
+}
+
+record(bi, "$(PREFIX):SOLENOID03-SLOCREM-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+1 T=INT8 B=6" )
+	field(FLNK, "$(PREFIX):SOLENOID03-SLOCREM-INT")
+}
+
+record(longin, "$(PREFIX):SOLENOID03-DTYP-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+2 T=BYTE" )
+}
+
+record(longin, "$(PREFIX):SOLENOID03-ERR-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+4 T=INT16" )
+}
+
+record(ai, "$(PREFIX):SOLENOID03-UPTIMENOHV-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+6 T=REAL32" )
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-VMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+10 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "V")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-IMON-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+14 T=REAL32" )
+	field(MDEL, "-1")
+	field(EGU, "A")
+	field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-VSVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+18 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID03-VSVAL-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-ISVAL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+22 T=REAL32" )
+	field(PREC, "2")
+	field(FLNK, "$(PREFIX):SOLENOID03-ISVAL-INT")
+}
+
+# I - set-points
+record(ai, "$(PREFIX):SOLENOID03-ISP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+26 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID03-ISP1-INT")
+}
+
+# V - set-points
+record(ai, "$(PREFIX):SOLENOID03-VSP1-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+30 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID03-VSP1-INT")
+}
+
+# I - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID03-IHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+34 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID03-IHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-ILOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+38 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID03-ILOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-IHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+42 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID03-IHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-ILOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+46 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+	field(FLNK, "$(PREFIX):SOLENOID03-ILOW-INT")
+}
+
+# V - threshold interlock levels
+record(ai, "$(PREFIX):SOLENOID03-VHIHI-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+50 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID03-VHIHI-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-VLOLO-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+54 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID03-VLOLO-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-VHIGH-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+58 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID03-VHIGH-INT")
+}
+
+record(ai, "$(PREFIX):SOLENOID03-VLOW-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+62 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+	field(FLNK, "$(PREFIX):SOLENOID03-VLOW-INT")
+}
+
+# Time-stamp
+record(waveform, "$(PREFIX):SOLENOID03-TMSTMP-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "S7plc")
+	field(INP, "@PLCINSTR/340+74 T=TIME")
+	field(FTVL, "CHAR")
+	field(NELM, "8")
+}
+
+# Maximum current allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID03-IMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+82 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "A")
+}
+
+# Maximum voltage allowed by the Solenoid
+record(ai, "$(PREFIX):SOLENOID03-VMAXSOL-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCINSTR/340+86 T=REAL32" )
+	field(PREC, "2")
+	field(EGU, "V")
+}
+
+#Check this!!
+#V_EGU_SP	Real	66.0
+#I_EGU_SP	Real	70.0
+
+
+record(bo, "$(PREFIX):SOLENOID01-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+0 T=INT8 B=2" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID01-SONST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+0 T=INT8 B=3" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID01-SIREG")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+0 T=INT8 B=4" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID01-SLOCREM")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+0 T=INT8 B=5" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID01-SFAULT")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+0 T=INT8 B=6" )
+	field(DISP, "1")
+}
+
+# I - set-point
+record(ao, "$(PREFIX):SOLENOID01-ISP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - set point
+record(ao, "$(PREFIX):SOLENOID01-VSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force voltage monitor
+record(ao, "$(PREFIX):SOLENOID01-VSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force current monitor
+record(ao, "$(PREFIX):SOLENOID01-ISVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID01-IHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-ILOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-IHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+26 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-ILOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+30 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID01-VHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+34 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-VLOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+38 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-VHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+42 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID01-VLOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/106+46 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+record(bo, "$(PREFIX):SOLENOID02-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+0 T=INT8 B=2" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID02-SONST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+0 T=INT8 B=3" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID02-SIREG")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+0 T=INT8 B=4" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID02-SLOCREM")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+0 T=INT8 B=5" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID02-SFAULT")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+0 T=INT8 B=6" )
+	field(DISP, "1")
+}
+
+# I - set-point
+record(ao, "$(PREFIX):SOLENOID02-ISP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - set point
+record(ao, "$(PREFIX):SOLENOID02-VSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force voltage monitor
+record(ao, "$(PREFIX):SOLENOID02-VSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force current monitor
+record(ao, "$(PREFIX):SOLENOID02-ISVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID02-IHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-ILOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-IHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+26 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-ILOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+30 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID02-VHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+34 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-VLOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+38 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-VHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+42 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID02-VLOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/156+46 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+record(bo, "$(PREFIX):SOLENOID03-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+0 T=INT8 B=2" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID03-SONST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+0 T=INT8 B=3" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID03-SIREG")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+0 T=INT8 B=4" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID03-SLOCREM")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+0 T=INT8 B=5" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):SOLENOID03-SFAULT")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+0 T=INT8 B=6" )
+	field(DISP, "1")
+}
+
+# I - set-point
+record(ao, "$(PREFIX):SOLENOID03-ISP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - set point
+record(ao, "$(PREFIX):SOLENOID03-VSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force voltage monitor
+record(ao, "$(PREFIX):SOLENOID03-VSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force current monitor
+record(ao, "$(PREFIX):SOLENOID03-ISVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID03-IHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-ILOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-IHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+26 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-ILOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+30 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - threshold interlock levels
+record(ao, "$(PREFIX):SOLENOID03-VHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+34 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-VLOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+38 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-VHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+42 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):SOLENOID03-VLOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCINSTR/206+46 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+record(seq, "$(PREFIX):SOLENOID01-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-FRC.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-FRC PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-SLOCREM-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-SLOCREM-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-SLOCREM.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-SLOCREM PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-SLOCREM-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-SFAULT-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-SFAULT-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-SFAULT.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-SFAULT PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-SFAULT-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-SONST-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-SONST-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-SONST.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-SONST PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-SONST-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-SIREG-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-SIREG-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-SIREG.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-SIREG PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-SIREG-INT.DISA")
+}
+
+# I - set-points
+record(seq, "$(PREFIX):SOLENOID01-ISP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-ISP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-ISP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-ISP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-ISP1-INT.DISA")
+}
+
+# V - set-points
+record(seq, "$(PREFIX):SOLENOID01-VSP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VSP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VSP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VSP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VSP1-INT.DISA")
+}
+
+# Force voltage monitor
+record(seq, "$(PREFIX):SOLENOID01-VSVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VSVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VSVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VSVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VSVAL-INT.DISA")
+}
+
+# Force current monitor
+record(seq, "$(PREFIX):SOLENOID01-ISVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-ISVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-ISVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-ISVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-ISVAL-INT.DISA")
+}
+
+# I - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID01-IHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-IHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-IHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-IHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-IHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-ILOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-ILOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-ILOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-ILOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-ILOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-IHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-IHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-IHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-IHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-IHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-ILOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-ILOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-ILOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-ILOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-ILOW-INT.DISA")
+}
+
+# V - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID01-VHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-VLOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VLOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VLOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VLOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VLOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-VHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID01-VLOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID01-VLOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID01-VLOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID01-VLOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID01-VLOW-INT.DISA")
+}
+record(seq, "$(PREFIX):SOLENOID02-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-FRC.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-FRC PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-SLOCREM-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-SLOCREM-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-SLOCREM.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-SLOCREM PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-SLOCREM-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-SFAULT-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-SFAULT-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-SFAULT.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-SFAULT PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-SFAULT-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-SONST-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-SONST-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-SONST.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-SONST PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-SONST-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-SIREG-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-SIREG-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-SIREG.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-SIREG PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-SIREG-INT.DISA")
+}
+
+# I - set-points
+record(seq, "$(PREFIX):SOLENOID02-ISP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-ISP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-ISP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-ISP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-ISP1-INT.DISA")
+}
+
+# V - set-points
+record(seq, "$(PREFIX):SOLENOID02-VSP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VSP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VSP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VSP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VSP1-INT.DISA")
+}
+
+# Force voltage monitor
+record(seq, "$(PREFIX):SOLENOID02-VSVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VSVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VSVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VSVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VSVAL-INT.DISA")
+}
+
+# Force current monitor
+record(seq, "$(PREFIX):SOLENOID02-ISVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-ISVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-ISVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-ISVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-ISVAL-INT.DISA")
+}
+
+# I - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID02-IHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-IHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-IHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-IHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-IHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-ILOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-ILOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-ILOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-ILOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-ILOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-IHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-IHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-IHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-IHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-IHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-ILOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-ILOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-ILOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-ILOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-ILOW-INT.DISA")
+}
+
+# V - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID02-VHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-VLOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VLOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VLOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VLOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VLOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-VHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID02-VLOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID02-VLOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID02-VLOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID02-VLOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID02-VLOW-INT.DISA")
+}
+record(seq, "$(PREFIX):SOLENOID03-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-FRC.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-FRC PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-SLOCREM-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-SLOCREM-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-SLOCREM.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-SLOCREM PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-SLOCREM-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-SFAULT-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-SFAULT-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-SFAULT.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-SFAULT PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-SFAULT-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-SONST-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-SONST-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-SONST.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-SONST PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-SONST-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-SIREG-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-SIREG-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-SIREG.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-SIREG PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-SIREG-INT.DISA")
+}
+
+# I - set-points
+record(seq, "$(PREFIX):SOLENOID03-ISP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-ISP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-ISP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-ISP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-ISP1-INT.DISA")
+}
+
+# V - set-points
+record(seq, "$(PREFIX):SOLENOID03-VSP1-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VSP1-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VSP1.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VSP1 PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VSP1-INT.DISA")
+}
+
+# Force voltage monitor
+record(seq, "$(PREFIX):SOLENOID03-VSVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VSVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VSVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VSVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VSVAL-INT.DISA")
+}
+
+# Force current monitor
+record(seq, "$(PREFIX):SOLENOID03-ISVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-ISVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-ISVAL.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-ISVAL PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-ISVAL-INT.DISA")
+}
+
+# I - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID03-IHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-IHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-IHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-IHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-IHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-ILOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-ILOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-ILOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-ILOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-ILOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-IHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-IHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-IHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-IHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-IHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-ILOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-ILOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-ILOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-ILOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-ILOW-INT.DISA")
+}
+
+# V - threshold interlock levels
+record(seq, "$(PREFIX):SOLENOID03-VHIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VHIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VHIHI.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VHIHI PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VHIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-VLOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VLOLO-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VLOLO.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VLOLO PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VLOLO-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-VHIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VHIGH-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VHIGH.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VHIGH PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VHIGH-INT.DISA")
+}
+
+record(seq, "$(PREFIX):SOLENOID03-VLOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):SOLENOID03-VLOW-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):SOLENOID03-VLOW.DISP")
+	field(LNK1, "$(PREFIX):SOLENOID03-VLOW PP")
+	field(LNK3, "$(PREFIX):SOLENOID03-VLOW-INT.DISA")
+}

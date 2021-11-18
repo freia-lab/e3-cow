@@ -1,0 +1,2962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1465</width>
+  <height>1000</height>
+  <actions>
+  </actions>
+  <widget type="picture" version="2.0.0">
+    <name>Image</name>
+    <file>images/RF_LPS_Layout_new.png</file>
+    <x>131</x>
+    <y>18</y>
+    <width>1094</width>
+    <height>865</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_1</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_2</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <height>100</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container</name>
+    <x>1110</x>
+    <y>223</y>
+    <width>343</width>
+    <height>239</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Power</text>
+      <x>20</x>
+      <y>35</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):FILAMENT-WMON-RB</pv_name>
+      <x>114</x>
+      <y>35</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current</text>
+      <x>20</x>
+      <y>60</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):FILAMENT-IMON-RB</pv_name>
+      <x>114</x>
+      <y>60</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_9</name>
+      <pv_name>$(PREFIX):FILAMENT-IRAMPON-RB</pv_name>
+      <x>206</x>
+      <y>59</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_176</name>
+      <text>I - ramp ON</text>
+      <x>240</x>
+      <y>59</y>
+      <width>79</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_10</name>
+      <pv_name>$(PREFIX):FILAMENT-VRAMPON-RB</pv_name>
+      <x>206</x>
+      <y>88</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_177</name>
+      <text>V - ramp ON</text>
+      <x>240</x>
+      <y>88</y>
+      <width>85</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_32</name>
+      <pv_name>$(PREFIX):FILAMENT-INT-RB</pv_name>
+      <x>206</x>
+      <y>34</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Interlock</text>
+      <x>240</x>
+      <y>34</y>
+      <width>73</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Filament</text>
+      <x>6</x>
+      <y>6</y>
+      <width>325</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Filament ramp process</text>
+      <x>29</x>
+      <y>155</y>
+      <width>145</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>WARM_STATUS</name>
+      <pv_name>$(PREFIX):FILAMENT-WARMUP-RB</pv_name>
+      <x>180</x>
+      <y>153</y>
+      <width>91</width>
+      <height>24</height>
+      <off_label>Idle</off_label>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_label>Running</on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="progressbar" version="2.0.0">
+      <name>Progress Bar</name>
+      <pv_name>$(PREFIX):FILAMENT-TWARMT-RB</pv_name>
+      <x>26</x>
+      <y>188</y>
+      <width>245</width>
+      <fill_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </fill_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>psu_on_status_led</name>
+      <pv_name>$(PREFIX):FILAMENT-STARTED-RB</pv_name>
+      <x>111</x>
+      <y>87</y>
+      <width>86</width>
+      <height>24</height>
+      <off_label>Stopped</off_label>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_label>Started</on_label>
+      <on_color>
+        <color red="61" green="255" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status</name>
+      <text>PSU Status</text>
+      <x>20</x>
+      <y>89</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_7</name>
+      <actions>
+        <action type="open_display">
+          <file>cowFILsignal.bob</file>
+          <macros>
+            <SGNL>FILAMENT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>289</x>
+      <y>120</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>WARM_STATUS_1</name>
+      <pv_name>$(PREFIX):FILAMENT-TEMPREACHED-RB</pv_name>
+      <x>180</x>
+      <y>120</y>
+      <width>91</width>
+      <height>24</height>
+      <off_label>Cold</off_label>
+      <off_color>
+        <color name="GREEN-BORDER" red="40" green="140" blue="40">
+        </color>
+      </off_color>
+      <on_label>Warm</on_label>
+      <on_color>
+        <color name="ON" red="61" green="216" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_133</name>
+      <text>Filament ramp process</text>
+      <x>29</x>
+      <y>122</y>
+      <width>145</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_7</name>
+    <x>620</x>
+    <y>339</y>
+    <width>290</width>
+    <height>120</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Solenoid</text>
+      <x>18</x>
+      <y>9</y>
+      <width>252</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_20</name>
+      <pv_name>$(PREFIX):RFS-Sol-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Sol-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Sol-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_196</name>
+      <text>Sol-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>42</y>
+      <width>150</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_35</name>
+      <pv_name>$(PREFIX):RFS-Sol-110:FIS-INT-RB</pv_name>
+      <x>72</x>
+      <y>74</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_197</name>
+      <text>Sol-110:Flow Switch</text>
+      <x>120</x>
+      <y>72</y>
+      <width>150</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Sol-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_19</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Sol-110:FIS</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>74</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_8</name>
+    <x>10</x>
+    <y>161</y>
+    <width>290</width>
+    <height>155</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Body</text>
+      <x>12</x>
+      <y>9</y>
+      <width>268</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(PREFIX):RFS-Body-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Body-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Body-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Body-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>42</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_38</name>
+      <pv_name>$(PREFIX):RFS-Body-110:FIS-INT-RB</pv_name>
+      <x>72</x>
+      <y>75</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Body-110:Flow Switch</text>
+      <x>120</x>
+      <y>75</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_3</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Body-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Body-110:TT</pv_name>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_14</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Body-110:FIS</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>75</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_18</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Kly-110:OpenPanel</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>105</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_41</name>
+      <pv_name>$(PREFIX):RFS-Kly-110:OpenPanel-INT-RB</pv_name>
+      <x>72</x>
+      <y>105</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_201</name>
+      <text>Kly-110:OpenPanel</text>
+      <x>120</x>
+      <y>105</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_9</name>
+    <x>10</x>
+    <y>329</y>
+    <width>290</width>
+    <height>276</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Oil tank</text>
+      <x>12</x>
+      <y>9</y>
+      <width>268</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Oil-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Oil-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_132</name>
+      <text>Oil-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>42</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(PREFIX):RFS-Oil-120:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>75</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Oil-120:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Oil-120:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Oil-120:Temp Sensor</text>
+      <x>120</x>
+      <y>72</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_2</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:FIS-INT-RB</pv_name>
+      <x>72</x>
+      <y>104</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_34</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:TSH-INT-RB</pv_name>
+      <x>72</x>
+      <y>134</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_35</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:LS-INT-RB</pv_name>
+      <x>72</x>
+      <y>164</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_197</name>
+      <text>Oil-110:Level Switch</text>
+      <x>120</x>
+      <y>162</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_196</name>
+      <text>Oil-110:Temp Switch</text>
+      <x>120</x>
+      <y>132</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Oil-110:Flow Switch</text>
+      <x>120</x>
+      <y>102</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_4</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_5</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-120:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>75</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_15</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:TSH</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>134</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_16</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:LS</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>164</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_17</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:FIS</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>104</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_22</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:FIShigh</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>194</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_36</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:FIShigh-INT-RB</pv_name>
+      <x>72</x>
+      <y>194</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_198</name>
+      <text>RFS-Oil-Sol-110:FIShigh</text>
+      <x>120</x>
+      <y>194</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_23</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Oil-110:FISlow</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>224</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_37</name>
+      <pv_name>$(PREFIX):RFS-Oil-110:FISlow-INT-RB</pv_name>
+      <x>72</x>
+      <y>224</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_199</name>
+      <text>RFS-Oil-Sol-110:FISlow</text>
+      <x>120</x>
+      <y>224</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_10</name>
+    <x>10</x>
+    <y>18</y>
+    <width>290</width>
+    <height>121</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Ion-pump</text>
+      <x>12</x>
+      <y>9</y>
+      <width>268</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>$(PREFIX):RFS-VacPS-110:I-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-VacPS-110:I-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-VacPS-110:I-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_194</name>
+      <text>KLY-IP-ISn:Current</text>
+      <x>120</x>
+      <y>42</y>
+      <width>133</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>$(PREFIX):RFS-VacPS-120:I-EGU-RB</pv_name>
+      <x>50</x>
+      <y>75</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-VacPS-120:I-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-VacPS-120:I-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_194</name>
+      <text>KLY-IP-ISn:Current</text>
+      <x>120</x>
+      <y>72</y>
+      <width>133</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_1</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-VacPS-110:I</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-VacPS-110:I</pv_name>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions) for:
+$(PREFIX):$(pv_name)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-VacPS-120:I</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-VacPS-120:I</pv_name>
+      <text>...</text>
+      <x>10</x>
+      <y>75</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_11</name>
+    <x>620</x>
+    <y>484</y>
+    <width>290</width>
+    <height>151</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Load</text>
+      <x>12</x>
+      <y>9</y>
+      <width>258</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(PREFIX):RFS-Load-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Sol-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Sol-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Load-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>42</y>
+      <width>150</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(PREFIX):RFS-Rload-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>75</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Rload-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Rload-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>RLoad-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>72</y>
+      <width>150</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_39</name>
+      <pv_name>$(PREFIX):RFS-Rload-110:FIT-INT-RB</pv_name>
+      <x>72</x>
+      <y>104</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_202</name>
+      <text>RLoad-110:Flow Switch</text>
+      <x>120</x>
+      <y>102</y>
+      <width>150</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_12</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Load-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_13</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Rload-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>75</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_20</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Rload-110:FIT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>104</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_12</name>
+    <x>1150</x>
+    <y>28</y>
+    <width>290</width>
+    <height>175</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Circulator</text>
+      <x>12</x>
+      <y>9</y>
+      <width>259</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(PREFIX):RFS-Circ-110:TT-EGU-RB</pv_name>
+      <x>50</x>
+      <y>45</y>
+      <width>64</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <rules>
+        <rule name="WarningAlarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv1==1">
+            <value>
+              <color name="Minor" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0 &amp;&amp; pv1==0">
+            <value>
+              <color red="61" green="255" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(PREFIX):RFS-Circ-110:TT-INT-RB</pv_name>
+          <pv_name>$(PREFIX):RFS-Circ-110:TT-WRN-RB</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Circ-110:W-Outlet Temp</text>
+      <x>120</x>
+      <y>42</y>
+      <width>160</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Circ-110:Flow Switch</text>
+      <x>120</x>
+      <y>75</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_40</name>
+      <pv_name>$(PREFIX):RFS-Circ-110:FIS-INT-RB</pv_name>
+      <x>72</x>
+      <y>75</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_6</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Circ-110:TT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>45</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_21</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Circ-110:FIS</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>10</x>
+      <y>75</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_25</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Coll-110:FIShigh</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>6</x>
+      <y>105</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_43</name>
+      <pv_name>$(PREFIX):RFS-Coll-110:FIShigh-INT-RB</pv_name>
+      <x>68</x>
+      <y>105</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_204</name>
+      <text>RFS-Coll-110:FIShigh</text>
+      <x>120</x>
+      <y>105</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_26</name>
+      <actions>
+        <action type="open_display">
+          <file>cowDIOsignal.bob</file>
+          <macros>
+            <SGNL>RFS-Circ-110:FISlow</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <pv_name>RFS-Coll-110:FISlow</pv_name>
+      <text>...</text>
+      <x>6</x>
+      <y>135</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_44</name>
+      <pv_name>$(PREFIX):RFS-Coll-110:FISlow-INT-RB</pv_name>
+      <x>72</x>
+      <y>135</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="252" green="13" blue="27">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_205</name>
+      <text>RFS-Coll-110:FISlow</text>
+      <x>120</x>
+      <y>135</y>
+      <width>160</width>
+      <height>21</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_13</name>
+    <x>1110</x>
+    <y>484</y>
+    <width>343</width>
+    <height>137</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Voltage monitor</text>
+      <x>10</x>
+      <y>34</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):SOLENOID01-VMON-RB</pv_name>
+      <x>125</x>
+      <y>34</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current monitor</text>
+      <x>10</x>
+      <y>59</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):SOLENOID01-IMON-RB</pv_name>
+      <x>125</x>
+      <y>59</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_32</name>
+      <pv_name>$(PREFIX):SOLENOID01-INT-RB</pv_name>
+      <x>220</x>
+      <y>33</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Interlock</text>
+      <x>254</x>
+      <y>31</y>
+      <width>73</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Solenoid-01</text>
+      <x>6</x>
+      <y>6</y>
+      <width>325</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>psu_on_status_led</name>
+      <pv_name>$(PREFIX):SOLENOID01-STARTED-RB</pv_name>
+      <x>122</x>
+      <y>86</y>
+      <width>86</width>
+      <height>24</height>
+      <off_label>Stopped</off_label>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_label>Started</on_label>
+      <on_color>
+        <color red="61" green="255" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status</name>
+      <text>PSU Status</text>
+      <x>10</x>
+      <y>88</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_8</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID01</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>271</x>
+      <y>86</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_14</name>
+    <x>1110</x>
+    <y>643</y>
+    <width>343</width>
+    <height>139</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Voltage monitor</text>
+      <x>10</x>
+      <y>34</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):SOLENOID02-VMON-RB</pv_name>
+      <x>125</x>
+      <y>34</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current monitor</text>
+      <x>10</x>
+      <y>59</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):SOLENOID02-IMON-RB</pv_name>
+      <x>125</x>
+      <y>59</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_32</name>
+      <pv_name>$(PREFIX):SOLENOID02-INT-RB</pv_name>
+      <x>220</x>
+      <y>33</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Interlock</text>
+      <x>254</x>
+      <y>31</y>
+      <width>73</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Solenoid-02</text>
+      <x>6</x>
+      <y>6</y>
+      <width>325</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>psu_on_status_led</name>
+      <pv_name>$(PREFIX):SOLENOID02-STARTED-RB</pv_name>
+      <x>122</x>
+      <y>86</y>
+      <width>86</width>
+      <height>24</height>
+      <off_label>Stopped</off_label>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_label>Started</on_label>
+      <on_color>
+        <color red="61" green="255" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status</name>
+      <text>PSU Status</text>
+      <x>10</x>
+      <y>88</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_9</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID02</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>271</x>
+      <y>86</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container_15</name>
+    <x>1110</x>
+    <y>800</y>
+    <width>343</width>
+    <height>139</height>
+    <style>2</style>
+    <foreground_color>
+      <color red="128" green="128" blue="128">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Voltage monitor</text>
+      <x>10</x>
+      <y>34</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):SOLENOID03-VMON-RB</pv_name>
+      <x>125</x>
+      <y>34</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current monitor</text>
+      <x>10</x>
+      <y>59</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):SOLENOID03-IMON-RB</pv_name>
+      <x>125</x>
+      <y>59</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_32</name>
+      <pv_name>$(PREFIX):SOLENOID03-INT-RB</pv_name>
+      <x>220</x>
+      <y>33</y>
+      <width>21</width>
+      <height>21</height>
+      <off_color>
+        <color name="OK" red="61" green="216" blue="61">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Interlock</text>
+      <x>254</x>
+      <y>31</y>
+      <width>73</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_129</name>
+      <text>Solenoid-03</text>
+      <x>6</x>
+      <y>6</y>
+      <width>325</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="IO Label" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>psu_on_status_led</name>
+      <pv_name>$(PREFIX):SOLENOID03-STARTED-RB</pv_name>
+      <x>122</x>
+      <y>86</y>
+      <width>86</width>
+      <height>24</height>
+      <off_label>Stopped</off_label>
+      <off_color>
+        <color name="OFF" red="169" green="169" blue="169">
+        </color>
+      </off_color>
+      <on_label>Started</on_label>
+      <on_color>
+        <color red="61" green="255" blue="61">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <square>true</square>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Warning: One or more variables are being forced
+OK: No variables are forced or simulated</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status</name>
+      <text>PSU Status</text>
+      <x>10</x>
+      <y>88</y>
+      <width>102</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_10</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID03</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>271</x>
+      <y>86</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="databrowser" version="2.0.0">
+    <name>DataBrowser</name>
+    <file>filamentDataBrowser.plt</file>
+    <x>631</x>
+    <y>643</y>
+    <width>450</width>
+    <height>299</height>
+    <show_toolbar>false</show_toolbar>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(PREFIX):RFS-Kly-110:RedLight-INT-RB</pv_name>
+    <x>480</x>
+    <y>145</y>
+    <width>60</width>
+    <off_label>RFON</off_label>
+    <off_color>
+      <color name="OFF" red="169" green="169" blue="169">
+      </color>
+    </off_color>
+    <on_label>RFON</on_label>
+    <on_color>
+      <color name="MAJOR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(PREFIX):RFS-Kly-110:GreenLight-INT-RB</pv_name>
+    <x>480</x>
+    <y>195</y>
+    <width>60</width>
+    <off_label>STDBY</off_label>
+    <off_color>
+      <color name="OFF" red="169" green="169" blue="169">
+      </color>
+    </off_color>
+    <on_label>STDBY</on_label>
+    <on_color>
+      <color name="ON" red="61" green="216" blue="61">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>$(PREFIX):RFS-Kly-110:YellowLight-INT-RB</pv_name>
+    <x>480</x>
+    <y>170</y>
+    <width>60</width>
+    <off_label>HVON</off_label>
+    <off_color>
+      <color name="OFF" red="169" green="169" blue="169">
+      </color>
+    </off_color>
+    <on_label>HVON</on_label>
+    <on_color>
+      <color name="ORANGE" red="254" green="194" blue="81">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+</display>

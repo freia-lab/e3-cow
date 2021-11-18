@@ -1,0 +1,322 @@
+record(bi, "$(PREFIX):CPU-CONN") {
+        field(DTYP, "S7plc stat")
+  	field(INP,  "@PLCCPU")
+  	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+	field(ONAM, "Connected")
+}
+## CPU STAT
+
+record(bi, "$(PREFIX):CPU-RST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=0" )
+}
+
+record(bi, "$(PREFIX):CPU-LTCHMD-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=1" )
+	field(ZNAM, "LTCH-DISA")
+        field(ONAM, "LTCH-ENA")
+}
+
+record(bi, "$(PREFIX):CPU-INTRLCK-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=2" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):CPU-WRNACKREQ-RB")
+{
+	field(DESC, "Warning - Acknowledgement required")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=3" )
+	field(ZNAM, "OK")
+        field(ONAM, "WARNING")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):CPU-GERSEMI_COM_OK")
+{
+	field(DESC, "Connection to Gersemi")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+        field(ONAM, "Connected")
+        field(ZSV, "MAJOR")
+        field(OSV, "NO_ALARM")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=4" )
+}
+
+record(bi, "$(PREFIX):CPU-FLSHBX_HV")
+{
+	field(DESC, "High Voltage Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "High Voltage")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=5" )
+}
+
+record(bi, "$(PREFIX):CPU-FLSHBX_HC")
+{
+	field(DESC, "High Current Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "Hi Current")	
+	field(INP, "@PLCCPU/0+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):CPU-FLSHBX_HE")
+{
+	field(DESC, "Le Helium Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "Liquid He")
+	field(INP, "@PLCCPU/0+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):CPU-RFENMIPRCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "RFON-PRE-MISS")
+        field(ONAM, "RFON-PRE-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=0" )
+}
+
+record(bi, "$(PREFIX):CPU-AUXMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "AUX-SUP-MISS")
+        field(ONAM, "AUX-SUP-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=1" )
+}
+
+
+record(bi, "$(PREFIX):CPU-FILMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "FIL-SUP-MISS")
+        field(ONAM, "FIL-SUP-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):CPU-STBYMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "STDBY-SUP-MISS")
+        field(ONAM, "STDBY-SUP-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=3" )
+}
+
+record(bi, "$(PREFIX):CPU-HVENMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "HVON-SUP-MISS")
+        field(ONAM, "HVON-SUP-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=4" )
+}
+
+record(bi, "$(PREFIX):CPU-RFENMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "RFON-SUP-MISS")
+        field(ONAM, "RFON-SUP-OK")
+	field(INP, "@PLCCPU/0+1 T=INT8 B=5" )
+}
+
+record(bi, "$(PREFIX):CPU-FRCACT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+2 T=INT8 B=4" )
+	field(ZNAM, "OK")
+        field(ONAM, "FRC-ON")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(mbbi, "$(PREFIX):CPU-ACTSTATE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@PLCCPU/0+3 T=UINT8" )
+        field(ZRVL, "0")
+	field(ONVL, "1")
+	field(TWVL, "2")
+	field(THVL, "3")
+	field(FRVL, "4")
+	field(FVVL, "5")
+	field(SXVL, "6")
+	field(SVVL, "7")
+	field(EIVL, "8")
+	field(NIVL, "9")
+	field(TEVL, "10")
+	field(ZRST, "OFF")
+	field(ONST, "PRE_AUX")
+	field(TWST, "AUX")
+	field(THST, "PRE_FIL")
+	field(FRST, "FIL")
+	field(FVST, "PRE_STDBY")
+	field(SXST, "STDBY")
+	field(SVST, "PRE_HVON")
+	field(EIST, "HVON")
+	field(NIST, "PRE_RFON")
+	field(TEST, "RFON")
+	field(NOBT, "11")
+	field(SHFT, "0")
+	
+}
+
+record(mbbi, "$(PREFIX):CPU-STATE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP,  "@PLCCPU/0+4 T=INT16" )
+	field(ZRVL, "0")
+	field(ONVL, "2")
+	field(TWVL, "4")
+	field(THVL, "6")
+	field(FRVL, "8")
+	field(FVVL, "10")
+	field(ZRST, "OFF")
+	field(ONST, "AUX")
+	field(TWST, "FIL")
+	field(THST, "STDBY")
+	field(FRST, "HVON")
+	field(FVST, "RFON")
+	field(NOBT, "11")
+	field(SHFT, "0")
+#	field(FLNK, "$(PREFIX):CPU-STATE-INT")
+}
+
+record(mbbi, "$(PREFIX):CPU-OPMODE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP,  "@PLCCPU/0+6 T=UINT8" )
+	field(ZRVL, "1")
+	field(ONVL, "2")
+	field(TWVL, "3")
+	field(THVL, "4")
+	field(ZRST, "Bypass")
+	field(ONST, "Maintainance")
+	field(TWST, "Normal")
+	field(THST, "Wire test")
+	field(FLNK, "$(PREFIX):CPU-OPMODE-INT")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+
+record(seq, "$(PREFIX):CPU-OPMODE-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):CPU-OPMODE-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):CPU-OPMODE.DISP")
+	field(LNK1, "$(PREFIX):CPU-OPMODE PP")
+	field(LNK3, "$(PREFIX):CPU-OPMODE-INT.DISA")
+}
+## CPU RESET
+
+record(bo, "$(PREFIX):CPU-RST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@PLCCPU/0+0 T=UINT8 B=0" )
+	field(HIGH, "1.0")
+	field(VAL, "0")
+}
+
+## CPU CMD OFF
+
+record(bo, "$(PREFIX):CPU-OFF")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=1" )
+	field(HIGH, "1.0")
+}
+
+# was CPU-AUX
+record(bo, "$(PREFIX):EE-1:CloseCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=2" )
+	field(HIGH, "1.0")
+}
+
+# was CPU-FIL
+record(bo, "$(PREFIX):EE-1:RstCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=3" )
+	field(HIGH, "1.0")
+}
+
+# was CPU-STDBY
+record(bo, "$(PREFIX):EE-2:CloseCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=4" )
+	field(HIGH, "1.0")
+}
+
+# was CPU-HVON
+record(bo, "$(PREFIX):EE-2:RstCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=5" )
+	field(HIGH, "1.0")
+}
+
+
+record(bo, "$(PREFIX):CPU-RFON")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=6" )
+	field(HIGH, "1.0")
+}
+
+record(bo, "$(PREFIX):CPU-TEST-ALL-ADS")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@PLCCPU/0+0 T=INT8 B=7" )
+	field(HIGH, "1.0")
+	field(VAL, "0")
+}
+
+record(mbbo, "$(PREFIX):CPU-OPMODE")
+{
+	field(DTYP, "S7plc")
+	field(OUT,  "@PLCCPU/0+2 T=UINT8" )
+	field(ZRVL, "1")
+	field(ONVL, "2")
+	field(TWVL, "3")
+	field(THVL, "4")
+	field(ZRST, "Bypass")
+	field(ONST, "Maintainance")
+	field(TWST, "Normal")
+	field(THST, "Wire test")
+	field(NOBT, "8")
+	field(SHFT, "0")
+	field(DISP, "1")
+}
+

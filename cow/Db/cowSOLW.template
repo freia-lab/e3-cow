@@ -1,0 +1,136 @@
+record(bo, "$(PREFIX):$(SGNL)-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-SONST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-SIREG")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-SLOCREM")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+	field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-SFAULT")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=6" )
+	field(DISP, "1")
+}
+
+# I - set-point
+record(ao, "$(PREFIX):$(SGNL)-ISP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - set point
+record(ao, "$(PREFIX):$(SGNL)-VSP1")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force voltage monitor
+record(ao, "$(PREFIX):$(SGNL)-VSVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+10 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# Force current monitor
+record(ao, "$(PREFIX):$(SGNL)-ISVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+14 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# I - threshold interlock levels
+record(ao, "$(PREFIX):$(SGNL)-IHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+18 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ILOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+22 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-IHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+26 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-ILOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+30 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+# V - threshold interlock levels
+record(ao, "$(PREFIX):$(SGNL)-VHIHI")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+34 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-VLOLO")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+38 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-VHIGH")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+42 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-VLOW")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+46 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+}

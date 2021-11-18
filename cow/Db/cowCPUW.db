@@ -1,0 +1,84 @@
+## CPU RESET
+
+record(bo, "$(PREFIX):$(SGNL)-RST")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=UINT8 B=0" )
+	field(HIGH, "$(HOLDHIGH)")
+	field(VAL, "0")
+}
+
+## CPU CMD OFF
+
+record(bo, "$(PREFIX):$(SGNL)-OFF")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+# was $(SGNL)-AUX
+record(bo, "$(PREFIX):EE-1:CloseCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+# was $(SGNL)-FIL
+record(bo, "$(PREFIX):EE-1:RstCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+# was $(SGNL)-STDBY
+record(bo, "$(PREFIX):EE-2:CloseCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+# was $(SGNL)-HVON
+record(bo, "$(PREFIX):EE-2:RstCmd")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+
+record(bo, "$(PREFIX):$(SGNL)-RFON")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=6" )
+	field(HIGH, "$(HOLDHIGH)")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-TEST-ALL-ADS")
+{
+	field(DTYP, "S7plc")
+	field( OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
+	field(HIGH, "$(HOLDHIGH)")
+	field(VAL, "0")
+}
+
+record(mbbo, "$(PREFIX):$(SGNL)-OPMODE")
+{
+	field(DTYP, "S7plc")
+	field(OUT,  "@$(PLC)/$(SOFF)+2 T=UINT8" )
+	field(ZRVL, "1")
+	field(ONVL, "2")
+	field(TWVL, "3")
+	field(THVL, "4")
+	field(ZRST, "Bypass")
+	field(ONST, "Maintainance")
+	field(TWST, "Normal")
+	field(THST, "Wire test")
+	field(NOBT, "8")
+	field(SHFT, "0")
+	field(DISP, "1")
+}
+

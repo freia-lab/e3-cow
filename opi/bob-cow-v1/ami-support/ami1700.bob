@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>ami1700</name>
+  <macros>
+    <BIG_DSPL_PV>$(P):$(DEV)-level:sRdV</BIG_DSPL_PV>
+    <DEV>LT600</DEV>
+    <LABEL>CoW-$(DEV)</LABEL>
+    <P>CoW-LHe</P>
+  </macros>
+  <height>700</height>
+  <scripts>
+    <script file="EmbeddedPy">
+      <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))
+#ipaddr = PVUtil.getString(pvs[0])
+#print ipaddr
+widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
+]]></text>
+      <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+    </script>
+  </scripts>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>$(LABEL)</text>
+    <x use_class="true">20</x>
+    <y use_class="true">0</y>
+    <width>250</width>
+    <height use_class="true">50</height>
+    <font use_class="true">
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment use_class="true">0</horizontal_alignment>
+    <vertical_alignment use_class="true">1</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <SIG>length</SIG>
+    </macros>
+    <file>rw-numeric.bob</file>
+    <x>20</x>
+    <y>120</y>
+    <width>530</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <SIG>EGU</SIG>
+    </macros>
+    <file>rw-enum.bob</file>
+    <x>20</x>
+    <y>150</y>
+    <width>530</width>
+    <height>35</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <SIG>I</SIG>
+    </macros>
+    <file>ro-numeric.bob</file>
+    <x>20</x>
+    <y>250</y>
+    <width>460</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_3</name>
+    <macros>
+      <SIG>V</SIG>
+    </macros>
+    <file>ro-numeric.bob</file>
+    <x>20</x>
+    <y>320</y>
+    <width>460</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <macros>
+      <SIG>PS</SIG>
+    </macros>
+    <file>ro-numeric.bob</file>
+    <x>20</x>
+    <y>220</y>
+    <width>460</width>
+    <height>30</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>10</x>
+    <y>560</y>
+    <width>550</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Id</text>
+      <width>20</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>$(P):$(DEV)-Id</pv_name>
+      <x>30</x>
+      <width>520</width>
+      <format>6</format>
+    </widget>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <SIG>name</SIG>
+    </macros>
+    <file>rw-numeric.bob</file>
+    <x>20</x>
+    <y>90</y>
+    <width>530</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <SIG>level</SIG>
+    </macros>
+    <file>ro-numeric.bob</file>
+    <x>20</x>
+    <y>290</y>
+    <width>460</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_8</name>
+    <macros>
+      <SIG>R</SIG>
+    </macros>
+    <file>ro-numeric.bob</file>
+    <x>20</x>
+    <y>350</y>
+    <width>460</width>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(BIG_DSPL_PV)</pv_name>
+    <x>240</x>
+    <y>3</y>
+    <width>230</width>
+    <height>45</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <tooltip>From analog output (PLC)
+$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Configuration</text>
+    <x>10</x>
+    <y>530</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P):$(DEV):sConf</pv_name>
+    <x>120</x>
+    <y>530</y>
+    <width>440</width>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>  Measurement Control  </name>
+    <y>390</y>
+    <width>490</width>
+    <height>102</height>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_5</name>
+      <macros>
+        <SIG>interval</SIG>
+      </macros>
+      <file>rw-numeric.bob</file>
+      <width>450</width>
+      <height>30</height>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>30</y>
+      <width>450</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>0</value>
+            <description>Sample &amp; Hold</description>
+          </action>
+        </actions>
+        <pv_name>$(P):$(DEV):cmdSH</pv_name>
+        <x>200</x>
+        <width>120</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_1</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>0</value>
+            <description>Continous</description>
+          </action>
+        </actions>
+        <pv_name>$(P):$(DEV):cmdCont</pv_name>
+        <x>330</x>
+        <width>120</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_1</name>
+        <text>Select mode:</text>
+        <height>30</height>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Raw value</text>
+    <x>240</x>
+    <y>195</y>
+    <width>90</width>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Smoothed value</text>
+    <x>360</x>
+    <y>195</y>
+    <width>120</width>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Re-load Display after change</text>
+    <x>20</x>
+    <y>170</y>
+    <width>210</width>
+    <foreground_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions execute_as_one="true">
+      <action type="open_webpage">
+        <url>http://$(URL)</url>
+        <description>Open Webpage</description>
+      </action>
+    </actions>
+    <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+    <text>Open Web Interface...</text>
+    <x>270</x>
+    <y>490</y>
+    <width>210</width>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))
+#ipaddr = PVUtil.getString(pvs[0])
+#print ipaddr
+widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
+]]></text>
+        <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+      </script>
+    </scripts>
+    <tooltip>Gives full controll over the instrument.</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>IP Address:</text>
+    <x>10</x>
+    <y>500</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+    <x>120</x>
+    <y>500</y>
+  </widget>
+</display>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>aidio overview</name>
+  <width>200</width>
+  <height>22</height>
+  <background_color>
+    <color name="Read_Background" red="230" green="235" blue="232">
+    </color>
+  </background_color>
+  <widget type="led" version="2.0.0">
+    <name>LED_11</name>
+    <pv_name>$(PREFIX)$(SUBS):$(SGNL)</pv_name>
+    <x>172</x>
+    <y>3</y>
+    <width>18</width>
+    <height>18</height>
+    <off_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PREFIX)$(SUBS):$(SGNL).DESC</pv_name>
+    <x>5</x>
+    <y>2</y>
+    <width>160</width>
+    <height>18</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="Background" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0 == 1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(PREFIX)$(SUBS):$(SGNL)-FRC-RB</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+</display>

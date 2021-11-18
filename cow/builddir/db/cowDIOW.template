@@ -1,0 +1,43 @@
+record(bo, "$(PREFIX):$(SGNL)-DIS")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-FRC")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(DISP, "1")
+	field(ZNAM, "No")
+        field(ONAM, "Yes")
+	field(FLNK, "$(PREFIX):$(SGNL)-FRC-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-FRC-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-FRC.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).SIMM PP")
+}
+
+
+record(bo, "$(PREFIX):$(SGNL)-SVAL")
+{
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field(DISP, "1")
+	field(FLNK, "$(PREFIX):$(SGNL)-SVAL-SEQ")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-SVAL-SEQ")
+{
+        field(DOL1, "$(PREFIX):$(SGNL)-SVAL.VAL")
+        field(LNK1, "$(PREFIX):$(SGNL).SVAL PP")
+}
+
+

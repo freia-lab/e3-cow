@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Time stamp</name>
+  <width>1000</width>
+  <height>800</height>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label_196</name>
+    <class>SECTION</class>
+    <text>Signal name</text>
+    <x>120</x>
+    <y>40</y>
+    <width>120</width>
+    <height>45</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <class>SECTION</class>
+    <text>Time-stamp of last interlock</text>
+    <x>330</x>
+    <y>40</y>
+    <width>120</width>
+    <height>45</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <SGNL>TS740</SGNL>
+    </macros>
+    <file>time-stamp.bob</file>
+    <x>20</x>
+    <y>85</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <SGNL>EH740:cHtrOn</SGNL>
+    </macros>
+    <file>time-stamp.bob</file>
+    <x>20</x>
+    <y>115</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_34</name>
+    <macros>
+      <SGNL>EH641AC:cHtrOn</SGNL>
+    </macros>
+    <file>time-stamp.bob</file>
+    <x>20</x>
+    <y>145</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_35</name>
+    <macros>
+      <SGNL>EH742AC:cHtrOn</SGNL>
+    </macros>
+    <file>time-stamp.bob</file>
+    <x>20</x>
+    <y>175</y>
+    <width>470</width>
+    <height>30</height>
+  </widget>
+</display>

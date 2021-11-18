@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>cernox-table</name>
+  <macros>
+    <PREFIX>CoW</PREFIX>
+  </macros>
+  <width>1200</width>
+  <height>900</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>HEADER3</class>
+    <text>CABTF</text>
+    <x>10</x>
+    <y>5</y>
+    <width>350</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <background_color use_class="true">
+      <color name="Background" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT642</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>30</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT643</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>68</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT644</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>107</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_3</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT645</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>146</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT641B</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>185</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_5</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT641C</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>224</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT675</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>262</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT676</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>301</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_8</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT677</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>340</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_9</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT678</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>379</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_10</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT679</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>418</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_11</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT694</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>456</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_12</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT745</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>495</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_13</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT749</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>534</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_14</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT751</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>573</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_15</name>
+    <macros>
+      <SUBS>LHe</SUBS>
+      <TT>TT753</TT>
+    </macros>
+    <file>cernox-chan.bob</file>
+    <x>10</x>
+    <y>612</y>
+    <width>350</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_16</name>
+    <macros>
+      <H>EH740</H>
+      <P>CoW</P>
+      <S>LHe</S>
+      <T1>TT740</T1>
+    </macros>
+    <file>Heater-1T.bob</file>
+    <x>10</x>
+    <y>740</y>
+    <width>1180</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <class>HEADER3</class>
+    <text>ADC</text>
+    <x>440</x>
+    <y>5</y>
+    <width>410</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <background_color use_class="true">
+      <color name="Background" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_21</name>
+    <macros>
+      <D>RFS-Sol-110:TT</D>
+      <L>ADC ch4</L>
+      <PREFIX>CoW</PREFIX>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <file>adc-chan.bob</file>
+    <x>440</x>
+    <y>190</y>
+    <width>405</width>
+    <height>40</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_22</name>
+    <macros>
+      <D>RFS-Sol-120:TT</D>
+      <L>ADC ch5</L>
+      <PREFIX>CoW</PREFIX>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <file>adc-chan.bob</file>
+    <x>440</x>
+    <y>230</y>
+    <width>405</width>
+    <height>40</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_23</name>
+    <macros>
+      <D>RFS-Win-110:TT</D>
+      <L>ADC ch6</L>
+      <PREFIX>CoW</PREFIX>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <file>adc-chan.bob</file>
+    <x>440</x>
+    <y>270</y>
+    <width>405</width>
+    <height>40</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_24</name>
+    <macros>
+      <D>RFS-Win-120:TT</D>
+      <L>ADC ch7</L>
+      <PREFIX>CoW</PREFIX>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <file>adc-chan.bob</file>
+    <x>440</x>
+    <y>310</y>
+    <width>405</width>
+    <height>40</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <class>HEADER3</class>
+    <text>DI</text>
+    <x>380</x>
+    <y>380</y>
+    <width>250</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <background_color use_class="true">
+      <color name="Background" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_121</name>
+    <macros>
+      <H>EH742AC</H>
+      <P>CoW</P>
+      <S>LHe</S>
+      <T1>TT742A</T1>
+      <T2>TT742B</T2>
+      <T3>TT742C</T3>
+    </macros>
+    <file>Heater-3T.bob</file>
+    <x>10</x>
+    <y>780</y>
+    <width>1180</width>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_122</name>
+    <macros>
+      <H>EH641AC</H>
+      <P>CoW</P>
+      <S>LHe</S>
+      <T1>TT641B</T1>
+      <T2>TT641C</T2>
+    </macros>
+    <file>Heater-2T.bob</file>
+    <x>10</x>
+    <y>820</y>
+    <width>1180</width>
+    <height>30</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SGNL>TT742A</SGNL>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>440</x>
+    <y>30</y>
+    <width>450</width>
+    <height>40</height>
+    <style>3</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_17</name>
+      <macros>
+        <D>TT742A</D>
+        <L>TT742A</L>
+        <PREFIX>CoW</PREFIX>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <file>adc-chan.bob</file>
+      <width>405</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_117</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>$(SGNL)</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>410</x>
+      <y>10</y>
+      <width>35</width>
+      <height>20</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SGNL>TT742B</SGNL>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>440</x>
+    <y>70</y>
+    <width>445</width>
+    <height>40</height>
+    <style>3</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_18</name>
+      <macros>
+        <D>TT742B</D>
+        <L>TT742B</L>
+        <PREFIX>CoW</PREFIX>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <file>adc-chan.bob</file>
+      <width>405</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_118</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>$(SGNL)</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>410</x>
+      <y>10</y>
+      <width>35</width>
+      <height>20</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SGNL>TT742C</SGNL>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>440</x>
+    <y>110</y>
+    <width>445</width>
+    <height>40</height>
+    <style>3</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_19</name>
+      <macros>
+        <D>TT742C</D>
+        <L>TT742C</L>
+        <PREFIX>CoW</PREFIX>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <file>adc-chan.bob</file>
+      <width>405</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_119</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>$(SGNL)</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>410</x>
+      <y>10</y>
+      <width>35</width>
+      <height>20</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SGNL>TT740</SGNL>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>440</x>
+    <y>150</y>
+    <width>445</width>
+    <height>40</height>
+    <style>3</style>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_20</name>
+      <macros>
+        <D>TT740</D>
+        <L>TT740</L>
+        <PREFIX>CoW</PREFIX>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <file>adc-chan.bob</file>
+      <width>405</width>
+      <height>40</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_120</name>
+      <actions>
+        <action type="open_display">
+          <file>cowAFsignal.bob</file>
+          <macros>
+            <SGNL>$(SGNL)</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>410</x>
+      <y>10</y>
+      <width>35</width>
+      <height>20</height>
+      <font>
+        <font family="Source Sans Pro" style="REGULAR" size="14.0">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>380</x>
+    <y>405</y>
+    <width>250</width>
+    <height>240</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group_43</name>
+      <macros>
+        <SGNL>TS740</SGNL>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_101</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_105</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_44</name>
+      <macros>
+        <SGNL>EE-1:Remote</SGNL>
+        <SUBS>-LHe</SUBS>
+      </macros>
+      <y>30</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_106</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_102</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_45</name>
+      <macros>
+        <SGNL>EE-1:NoError</SGNL>
+      </macros>
+      <y>60</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_107</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_103</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_46</name>
+      <macros>
+        <SGNL>EE-1:Closed</SGNL>
+      </macros>
+      <y>90</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_108</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_104</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_47</name>
+      <macros>
+        <SGNL>EE-1:NoWarn</SGNL>
+      </macros>
+      <y>120</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_109</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_105</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_48</name>
+      <macros>
+        <SGNL>EE-1:SPAstat</SGNL>
+      </macros>
+      <y>150</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_110</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_106</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_49</name>
+      <macros>
+        <SGNL>PC-1:PwrFail</SGNL>
+      </macros>
+      <y>180</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_111</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_107</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_50</name>
+      <macros>
+        <SGNL>PC-1:Connected</SGNL>
+      </macros>
+      <y>210</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_112</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_108</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <macros>
+      <SUBS>-LHe</SUBS>
+    </macros>
+    <x>640</x>
+    <y>380</y>
+    <width>250</width>
+    <height>265</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <class>HEADER3</class>
+      <text>DO</text>
+      <width>250</width>
+      <height>25</height>
+      <font use_class="true">
+        <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+        </font>
+      </font>
+      <background_color use_class="true">
+        <color name="Background" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <transparent use_class="true">true</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_51</name>
+      <macros>
+        <SGNL>EH740:cHtrOn</SGNL>
+      </macros>
+      <y>25</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_113</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_109</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_52</name>
+      <macros>
+        <SGNL>EH641AC:cHtrOn</SGNL>
+      </macros>
+      <y>55</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_114</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_110</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_53</name>
+      <macros>
+        <SGNL>EH742AC:cHtrOn</SGNL>
+      </macros>
+      <y>85</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_115</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_111</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_54</name>
+      <macros>
+        <SGNL>EE-1:Closed</SGNL>
+      </macros>
+      <y>115</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_116</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_112</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_55</name>
+      <macros>
+        <SGNL>EE-1:NoWarn</SGNL>
+      </macros>
+      <y>145</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_117</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_113</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_56</name>
+      <macros>
+        <SGNL>EE-1:SPAstat</SGNL>
+      </macros>
+      <y>175</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_118</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_114</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_57</name>
+      <macros>
+        <SGNL>PC-1:PwrFail</SGNL>
+      </macros>
+      <y>205</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_119</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_115</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_58</name>
+      <macros>
+        <SGNL>PC-1:Connected</SGNL>
+      </macros>
+      <y>235</y>
+      <width>250</width>
+      <height>30</height>
+      <style>3</style>
+      <widget type="embedded" version="2.0.0">
+        <name>Embedded Display_120</name>
+        <file>aidio_overview_tiny.bob</file>
+        <x>2</x>
+        <y>2</y>
+        <width>202</width>
+        <height>22</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_116</name>
+        <actions>
+          <action type="open_display">
+            <file>cowDIOsignal.bob</file>
+            <macros>
+              <SGNL>$(SGNL)</SGNL>
+            </macros>
+            <target>window</target>
+            <description>Change PV settings</description>
+          </action>
+        </actions>
+        <text>...</text>
+        <x>210</x>
+        <y>3</y>
+        <width>35</width>
+        <height>20</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="14.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+  </widget>
+</display>

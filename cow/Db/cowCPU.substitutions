@@ -1,0 +1,26 @@
+global {PLC=PLCCPU, HOLDHIGH=1.0}
+
+file "cowConn.template" 
+{
+	pattern {SGNL}
+		{CPU}
+}
+
+file "cowCPUR.template"
+{
+	pattern {SGNL, SOFF}
+		{CPU, 0}
+}
+
+file "cowCPUInternal.template"
+{
+	pattern {SGNL}
+		{CPU}
+}
+
+file "cowCPUW.template"
+{
+	pattern {SGNL, SOFF}
+		{CPU, 0}
+}
+

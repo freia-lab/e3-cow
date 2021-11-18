@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1000</width>
+  <height>590</height>
+  <actions>
+  </actions>
+  <widget type="combo" version="2.0.0">
+    <name>Scan Combo_1</name>
+    <pv_name>loc://cowDigitalSignal("TS740")</pv_name>
+    <x>9</x>
+    <y>45</y>
+    <width>241</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="224" green="217" blue="202">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <items>
+      <item>TS740</item>
+      <item>EH740:cHtrOn</item>
+      <item>EH641AC:cHtrOn</item>
+      <item>EH742AC:cHtrOn</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Scan_1</name>
+    <pv_name>loc://cowDigitalSignal("TS740")</pv_name>
+    <x>265</x>
+    <y>45</y>
+    <width>150</width>
+    <height>25</height>
+    <foreground_color>
+      <color name="IO Foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="IO Grid" red="215" green="215" blue="215">
+      </color>
+    </background_color>
+    <format>6</format>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Digital PV to display</text>
+    <x>9</x>
+    <y>13</y>
+    <width>219</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <SGNL>loc://cowDigitalSignal</SGNL>
+    </macros>
+    <file>cowDIOsignal.bob</file>
+    <y>90</y>
+    <width>740</width>
+    <height>500</height>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="clearOpiRule" prop_id="file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <exp bool_exp="false">
+          <value></value>
+        </exp>
+        <pv_name>loc://cowDigitalSignal</pv_name>
+      </rule>
+      <rule name="setOpiRule" prop_id="file" out_exp="false">
+        <exp bool_exp="true">
+          <value>cowDIOsignal.bob</value>
+        </exp>
+        <pv_name>loc://cowDigitalSignal</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="../scripts/sgnl2Macro.py">
+        <pv_name>loc://cowDigitalSignal</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>DIO Connection Status</text>
+    <x>450</x>
+    <y>13</y>
+    <width>175</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>$(PREFIX)$(SUBS):DIO-CONN</pv_name>
+    <x>640</x>
+    <y>13</y>
+    <width>107</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="OK" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="INVALID" red="149" green="110" blue="221">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>     Machine State</name>
+    <x>615</x>
+    <y>190</y>
+    <width>328</width>
+    <height>126</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>Label_151</name>
+      <class>SECTION</class>
+      <text>Actual Mode</text>
+      <x>29</x>
+      <y>59</y>
+      <width>103</width>
+      <height>22</height>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Device prefix combo_3</name>
+      <pv_name>$(PREFIX):CPU-OPMODE</pv_name>
+      <x>147</x>
+      <y>18</y>
+      <width>140</width>
+      <height>27</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Change the Operation mode of the Amplifier</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_152</name>
+      <class>SECTION</class>
+      <text>Operation Mode</text>
+      <x>19</x>
+      <y>18</y>
+      <width>118</width>
+      <height>22</height>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_34</name>
+      <pv_name>$(PREFIX):CPU-OPMODE-RB</pv_name>
+      <x>147</x>
+      <y>59</y>
+      <width>125</width>
+      <height>22</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Operation Mode read-back</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    CPU Status</name>
+    <x>615</x>
+    <y>330</y>
+    <width>328</width>
+    <height>220</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_155</name>
+      <text>CPU Interlock/Alarm</text>
+      <x>137</x>
+      <y>40</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_156</name>
+      <text>Warning - Ack Req</text>
+      <x>137</x>
+      <y>65</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_157</name>
+      <text>Latch mode</text>
+      <x>137</x>
+      <y>90</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_158</name>
+      <text>ForceON status</text>
+      <x>137</x>
+      <y>115</y>
+      <width>135</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_37</name>
+      <pv_name>$(PREFIX):CPU-INTRLCK-RB</pv_name>
+      <x>20</x>
+      <y>40</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ERROR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+CPU Interlock/alarm </tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_38</name>
+      <pv_name>$(PREFIX):CPU-WRNACKREQ-RB</pv_name>
+      <x>20</x>
+      <y>65</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+One or more signals are being interlocked or may require an acknowledge.</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_39</name>
+      <pv_name>$(PREFIX):CPU-LTCHMD-RB</pv_name>
+      <x>20</x>
+      <y>90</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+The CPU latches the interlock until a reset is applied</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_40</name>
+      <pv_name>$(PREFIX):CPU-FRCACT-RB</pv_name>
+      <x>20</x>
+      <y>115</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+One or more signals are being simulated</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>RESET_BUTTON_1</name>
+      <pv_name>$(PREFIX):CPU-RST</pv_name>
+      <x>20</x>
+      <y>143</y>
+      <width>95</width>
+      <off_label>Reset</off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label>Reset</on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Reset all non-active interlocks</tooltip>
+      <show_confirm_dialog>2</show_confirm_dialog>
+      <confirm_message>This will reset all non-active interlocks</confirm_message>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_2</name>
+      <pv_name>$(PREFIX):CPU-TEST-ALL-ADS</pv_name>
+      <x>137</x>
+      <y>143</y>
+      <width>95</width>
+      <off_label>AD Test</off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label>AD Test</on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+        </action>
+      </actions>
+      <show_confirm_dialog>2</show_confirm_dialog>
+      <confirm_message>This will test the arc detectors and will generate interlocks</confirm_message>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_41</name>
+      <pv_name>$(PREFIX):CPU-CONN</pv_name>
+      <x>20</x>
+      <y>15</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="ERROR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+CPU Interlock/alarm </tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_159</name>
+      <text>CPU Connection Status</text>
+      <x>137</x>
+      <y>15</y>
+      <width>177</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+</display>

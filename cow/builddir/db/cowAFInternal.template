@@ -1,0 +1,94 @@
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-DIS-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-DIS-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-DIS.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-DIS PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-DIS-INT.DISA")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-FRC-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-FRC-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-FRC.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-FRC PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-FRC-INT.DISA")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-HIHI-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-HIHI-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-HIHI.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-HIHI PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-HIHI-INT.DISA")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-HIGH-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-HIGH-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX)$(SUBS):$(SGNL)-HIGH-RB.VAL")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-HIGH.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-HIGH PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-HIGH-INT.DISA")
+	field(LNK4, "$(PREFIX)$(SUBS):$(SGNL)-EGU-RB.HIGH")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-LOW-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-LOW-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX)$(SUBS):$(SGNL)-LOW-RB.VAL")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-LOW.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-LOW PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-LOW-INT.DISA")
+	field(LNK4, "$(PREFIX)$(SUBS):$(SGNL)-EGU-RB.LOW")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-LOLO-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-LOLO-RB")
+	field(DO3,  "1")
+	field(DOL4, "$(PREFIX)$(SUBS):$(SGNL)-LOLO-RB.VAL")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-LOLO.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-LOLO PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-LOLO-INT.DISA")
+	field(LNK4, "$(PREFIX)$(SUBS):$(SGNL)-EGU-RB.LOLO")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-AOFF-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-AOFF-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-AOFF.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-AOFF PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-AOFF-INT.DISA")
+}
+
+record(seq, "$(PREFIX)$(SUBS):$(SGNL)-SVAL-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX)$(SUBS):$(SGNL)-SVAL-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX)$(SUBS):$(SGNL)-SVAL.DISP")
+	field(LNK1, "$(PREFIX)$(SUBS):$(SGNL)-SVAL PP")
+	field(LNK3, "$(PREFIX)$(SUBS):$(SGNL)-SVAL-INT.DISA")
+}
+

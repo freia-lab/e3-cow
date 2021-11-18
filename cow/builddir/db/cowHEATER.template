@@ -1,0 +1,229 @@
+
+record(bi, "$(PREFIX)-$(SUBS):$(DEV):sAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS) T=BYTE B=0")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZSV, "MINOR")
+  field(ONAM, "Auto")
+  field(ZNAM, "Manual")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-$(SUBS):$(DEV):sTsw") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS) T=BYTE B=1")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(OSV, "MAJOR")
+  field(ONAM, "Fault")
+  field(ZNAM, "OK")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-$(SUBS):$(DEV):sCmd") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS) T=BYTE B=2")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-$(SUBS):$(DEV):sCmdAuto") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS) T=BYTE B=3")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ONAM, "True")
+  field(ZNAM, "False")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(bi, "$(PREFIX)-$(SUBS):$(DEV):sHtrOn") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS) T=BYTE B=4")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+  field(PINI, "YES")
+  field(SCAN, "I/O Intr")
+}
+
+record(ai, "$(PREFIX)-$(SUBS):$(DEV):sHL") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS)+2 T=FLOAT")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-$(SUBS):$(DEV):sHL-cHL-link")
+}
+
+record(calcout, "$(PREFIX)-$(SUBS):$(DEV):sHL-cHL-link") {
+  field(INPA, "$(PREFIX)-$(SUBS):$(DEV):sHL.VAL NPP")
+#  field(INPB, "$(PREFIX)-$(SUBS):$(DEV):sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cHL PP")
+}
+
+record(calcout, "$(PREFIX)-$(SUBS):$(DEV):sHL-cHL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-$(SUBS):$(DEV):sHL.VAL PP")
+#  field(INPB, "$(PREFIX)-$(SUBS):$(DEV):sAuto PP")
+#  field(CALC, "(B=0)?A:VAL")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cHL PP")
+}
+
+record(ai, "$(PREFIX)-$(SUBS):$(DEV):sLL") {
+  field(DTYP, "S7plc")
+  field(INP, "@$(PLC)/$(OFFS)+6 T=FLOAT")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(SCAN, "I/O Intr")
+  field(PINI, "YES")
+  field(FLNK, "$(PREFIX)-$(SUBS):$(DEV):sLL-cLL-link")
+}
+
+record(calcout, "$(PREFIX)-$(SUBS):$(DEV):sLL-cLL-link") {
+  field(INPA, "$(PREFIX)-$(SUBS):$(DEV):sLL.VAL NPP")
+#  field(INPB, "$(PREFIX)-$(SUBS):$(DEV):sAuto PP")
+#  field(INPC, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(CALC, "A")
+  field(OOPT, "On Change")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cLL PP")
+}
+
+record(calcout, "$(PREFIX)-$(SUBS):$(DEV):sLL-cLL-remInitLink") {
+#  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal PP")
+  field(INPA, "$(PREFIX)-$(SUBS):$(DEV):sLL.VAL PP")
+#  field(INPB, "$(PREFIX)-$(SUBS):$(DEV):sAuto PP")
+  field(CALC, "A")
+#  field(OOPT, "On Change")
+  field(PINI, "YES")
+  field(PHAS, "1")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cLL PP")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdAuto") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=0")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdAuto")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdMan") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=1")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdMan")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdSet") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=2")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdSet")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdRst") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=3")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdRst")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=4")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdHL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2) T=BYTE B=5")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(ZNAM, "Iddle")
+  field(ONAM, "CmdLL")
+  field(PINI, "NO")
+  field(HIGH, "0.5")
+  field(UDFS, "NO_ALARM")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdHL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cmdHL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(bo, "$(PREFIX)-$(SUBS):$(DEV):cmdLL-link") {
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(ONAM, "ON")
+  field(ZNAM, "OFF")
+  field(OUT, "$(PREFIX)-$(SUBS):$(DEV):cmdLL.VAL PP NMS")
+  field(SDIS, "$(PREFIX)-Ctrl:opMode:sLocal")
+}
+
+record(ao, "$(PREFIX)-$(SUBS):$(DEV):cHL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2)+2 T=FLOAT")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-$(SUBS):$(DEV):cmdHL-link")
+}
+
+
+record(ao, "$(PREFIX)-$(SUBS):$(DEV):cLL") {
+  field(DTYP, "S7plc")
+  field(OUT, "@$(PLC)/$(OFFS2)+6 T=FLOAT")
+  field(DESC, "$(SUBS) channel $(N)")
+  field(PINI, "NO")
+  field(PREC, "1")
+  field(EGU, "K")
+  field(FLNK, "$(PREFIX)-$(SUBS):$(DEV):cmdLL-link")
+}
+

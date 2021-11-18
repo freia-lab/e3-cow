@@ -1,0 +1,62 @@
+global {PLC=PLCAF}
+
+file "cowConn.template" 
+{
+
+	pattern {SGNL}
+			{AF}
+}
+
+
+file "cowAFR.template"
+{
+	pattern	{SUBS,   SGNL, 	        SOFF,	 PREC,      EGU,	DESC}
+		 {-LHe,	 TT742A,	0,    	1,    "K",	"ADC channel 0"}
+		 {-LHe,	 TT742B,	44,    	1,    "K",	"ADC channel 1"}
+		 {-LHe,	 TT742C,	88,    	1,    "K",	"ADC channel 2"}
+		 {-LHe,	 TT740,	132,   	2,    "K"	"PT100"}
+		 {-LHe,	 TT641B,	176,    2,    "K",	"PT100"}
+		 {-LHe,	 TT641C,	220,   	2,    "K",	"PT100"}
+		 {-LHe,	 PT660,	264,   	1,    "mbar",	"Brooks pressure gauge"}
+		 {-Vac,	 PT005,	308,    2,    "mbar",	"ADC channel 7"}
+		 {-Vac,	 PT004,	352,    2,    "mbar",	"ADC channel 6"}
+		 {-Vac,	 PT003,	396,    2,    "mbar",	"ADC channel 5"}
+		 {-LHe,	 ADC:CH3,	440   	2,    "C",	"ADC channel 3"}
+		 {-LHe,	 RFS-Oil-110:TT,	484,    	2,    "C",	"Oil tank temperature"}
+}
+
+file "cowAFW.template" 
+{
+	pattern	 {SUBS, SGNL, 	SOFF,	PREC}
+		 {-LHe,	 TT742A,	0,    	2}
+		 {-LHe,	 TT742B,	26,    	2}
+		 {-LHe,	 TT742C,	52,    	2}
+		 {-LHe,	 TT740,	78,    	2}
+		 {-LHe,	 TT641B,	104,    2}
+		 {-LHe,	 TT641C,	130,   	2}
+		 {-LHe,	 PT660,	156,    1}
+		 {-Vac,	 PT005,	182,    1}
+		 {-Vac,	 PT004,	208,    1}
+		 {-Vac,	 PT003,	234,    1}
+		 {-LHe,	 ADC:CH3,	260,  	2}
+		 {-LHe,	 RFS-Oil-110:TT,	286,    	2}
+}
+
+file "cowAFInternal.template"
+{
+	pattern 	{SUBS, SGNL}
+		{-LHe,	 TT742A}
+		{-LHe,	 TT742B}
+		{-LHe,	 TT742C}
+		{-LHe,	 TT740}
+		{-LHe,	 TT641B}
+		{-LHe,	 TT641C}
+		{-LHe,	 PT660}
+		{-Vac,	 PT005}
+		{-Vac,	 PT004}
+		{-Vac,	 PT003}
+		{-LHe,	 ADC:CH3}
+		{-LHe,	 RFS-Oil-110:TT}
+
+}
+

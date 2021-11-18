@@ -1,0 +1,81 @@
+global {PLC=PLCINSTR}
+
+file "cowConn.template"
+{
+	pattern {SGNL}
+		{INSTR}
+}
+
+file "cowCABTF.template"
+{
+	pattern 
+{OFFS, W_OFFS, PREC, 
+DEV1,     ID1,   STYP1,  LOPR1, HOPR1
+DEV2, 	  ID2,	 STYP2,  LOPR2, HOPR2
+DEV3, 	  ID3,	 STYP3,  LOPR3, HOPR3
+DEV4, 	  ID4,	 STYP4,  LOPR4, HOPR4	
+DEV5, 	  ID5,	 STYP5,  LOPR5, HOPR5	
+DEV6, 	  ID6,	 STYP6,  LOPR6, HOPR6	
+DEV7, 	  ID7,	 STYP7,  LOPR7, HOPR7	
+DEV8, 	  ID8,	 STYP8,  LOPR8, HOPR8
+DEV9, 	  ID9,	 STYP9,  LOPR9, HOPR9
+DEV10, 	  ID10,	 STYP10, LOPR10,HOPR10
+DEV11, 	  ID11,	 STYP11, LOPR11,HOPR11	
+DEV12, 	  ID12,	 STYP12, LOPR12,HOPR12	
+DEV13, 	  ID13,	 STYP13, LOPR13,HOPR13
+DEV14, 	  ID14,	 STYP14, LOPR14,HOPR14
+DEV15, 	  ID15,	 STYP15, LOPR15,HOPR15
+DEV16, 	  ID16,	 STYP16, LOPR16,HOPR16
+}
+{0,   60,	3,    
+-LHe:TT642,     CX_LS_X121480, Cernox, 1.5,  310	
+-LHe:TT740,     "pt100",       Cernox, 70,   400
+-LHe:TT644,     CX_LS_X107710, Cernox, 1.5,  310
+-LHe:TT645,     "NO CONVERSION", Cernox, 1.5,  310
+-LHe:TT641B,	"pt100",       "",     70,   400
+-LHe:TT641C,	"pt100",       "",     70,   400
+-LHe:TT675,     CX_LS_X121509, Cernox, 1.5,  310
+-LHe:TT676,     CX_LS_X121486, Cernox, 1.5,  310
+
+-LHe:TT677,     CX_LS_X103358, Cernox, 1.5,  310
+-LHe:TT678,     CX_LS_X121508, Cernox, 1.5,  310 
+-LHe:TT679,     CX_LS_X121521, Cernox, 1.5,  310 
+-LHe:TT680,     CX_LS_X121519, Cernox, 1.5,  310
+-LHe:TT745,	"pt100",       "",     70,   400
+-LHe:TT749,	"pt100",       "",     70,   400
+-LHe:TT751,	"pt100",       "",     70,   400
+-LHe:TT753,	"pt100",       "",     70,   400
+}
+
+file "cowHEATER.template"
+{
+	pattern {SUBS,	DEV,       N,  OFFS,   OFFS2}
+		{LHe	EH641AC,   1,  72,     0}
+		{LHe	EH740,     0,  82,     10}
+		{LHe	EH742AC,   2,  92,     20}
+}
+
+file "cowSOLR.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{SOLENOID01,	160,	2}
+		{SOLENOID02,	250,	2}
+		{SOLENOID03,	340,	2}
+}
+
+file "cowSOLW.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{SOLENOID01,	106,  	2} 
+		{SOLENOID02,	156,  	2} 
+		{SOLENOID03,	206,  	2} 
+}
+
+file "cowSOLInternal.template"
+{
+	pattern {SGNL}
+		{SOLENOID01}
+		{SOLENOID02}
+		{SOLENOID03}
+}
+

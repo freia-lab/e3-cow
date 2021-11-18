@@ -1,0 +1,221 @@
+## CPU STAT
+
+record(bi, "$(PREFIX):$(SGNL)-RST-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-LTCHMD-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(ZNAM, "LTCH-DISA")
+        field(ONAM, "LTCH-ENA")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-INTRLCK-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+	field(ZNAM, "OK")
+        field(ONAM, "ITLCK")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MAJOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-WRNACKREQ-RB")
+{
+	field(DESC, "Warning - Acknowledgement required")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+	field(ZNAM, "OK")
+        field(ONAM, "WARNING")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-GERSEMI_COM_OK")
+{
+	field(DESC, "Connection to Gersemi")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+        field(ONAM, "Connected")
+        field(ZSV, "MAJOR")
+        field(OSV, "NO_ALARM")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HV")
+{
+	field(DESC, "High Voltage Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "High Voltage")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HC")
+{
+	field(DESC, "High Current Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "Hi Current")	
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=6" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FLSHBX_HE")
+{
+	field(DESC, "Le Helium Flash Box")
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "")
+        field(ONAM, "Liquid He")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=7" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-RFENMIPRCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "RFON-PRE-MISS")
+        field(ONAM, "RFON-PRE-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=0" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-AUXMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "AUX-SUP-MISS")
+        field(ONAM, "AUX-SUP-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=1" )
+}
+
+
+record(bi, "$(PREFIX):$(SGNL)-FILMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "FIL-SUP-MISS")
+        field(ONAM, "FIL-SUP-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=2" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-STBYMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "STDBY-SUP-MISS")
+        field(ONAM, "STDBY-SUP-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=3" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-HVENMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "HVON-SUP-MISS")
+        field(ONAM, "HVON-SUP-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=4" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-RFENMISUCND-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(ZNAM, "RFON-SUP-MISS")
+        field(ONAM, "RFON-SUP-OK")
+	field(INP, "@$(PLC)/$(SOFF)+1 T=INT8 B=5" )
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FRCACT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+2 T=INT8 B=4" )
+	field(ZNAM, "OK")
+        field(ONAM, "FRC-ON")
+        field(ZSV, "NO_ALARM")
+        field(OSV, "MINOR")
+}
+
+record(mbbi, "$(PREFIX):$(SGNL)-ACTSTATE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+3 T=UINT8" )
+        field(ZRVL, "0")
+	field(ONVL, "1")
+	field(TWVL, "2")
+	field(THVL, "3")
+	field(FRVL, "4")
+	field(FVVL, "5")
+	field(SXVL, "6")
+	field(SVVL, "7")
+	field(EIVL, "8")
+	field(NIVL, "9")
+	field(TEVL, "10")
+	field(ZRST, "OFF")
+	field(ONST, "PRE_AUX")
+	field(TWST, "AUX")
+	field(THST, "PRE_FIL")
+	field(FRST, "FIL")
+	field(FVST, "PRE_STDBY")
+	field(SXST, "STDBY")
+	field(SVST, "PRE_HVON")
+	field(EIST, "HVON")
+	field(NIST, "PRE_RFON")
+	field(TEST, "RFON")
+	field(NOBT, "11")
+	field(SHFT, "0")
+	
+}
+
+record(mbbi, "$(PREFIX):$(SGNL)-STATE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP,  "@$(PLC)/$(SOFF)+4 T=INT16" )
+	field(ZRVL, "0")
+	field(ONVL, "2")
+	field(TWVL, "4")
+	field(THVL, "6")
+	field(FRVL, "8")
+	field(FVVL, "10")
+	field(ZRST, "OFF")
+	field(ONST, "AUX")
+	field(TWST, "FIL")
+	field(THST, "STDBY")
+	field(FRST, "HVON")
+	field(FVST, "RFON")
+	field(NOBT, "11")
+	field(SHFT, "0")
+#	field(FLNK, "$(PREFIX):$(SGNL)-STATE-INT")
+}
+
+record(mbbi, "$(PREFIX):$(SGNL)-OPMODE-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP,  "@$(PLC)/$(SOFF)+6 T=UINT8" )
+	field(ZRVL, "1")
+	field(ONVL, "2")
+	field(TWVL, "3")
+	field(THVL, "4")
+	field(ZRST, "Bypass")
+	field(ONST, "Maintainance")
+	field(TWST, "Normal")
+	field(THST, "Wire test")
+	field(FLNK, "$(PREFIX):$(SGNL)-OPMODE-INT")
+	field(NOBT, "8")
+	field(SHFT, "0")
+}
+

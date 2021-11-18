@@ -31,10 +31,21 @@ ARCH_FILTER += linux-x86_64
 # 
 # with $(ASYN_DEP_VERSION) defined in `configure/CONFIG_MODULE`
 
+REQUIRED += s7plc
+ifneq ($(strip $(S7PLC_DEP_VERSION)),)
+  s7plc_VERSION=$(S7PLC_DEP_VERSION)
+endif
+
+REQUIRED += iocshutils
+ifneq ($(strip $(IOCSHUTILS_DEP_VERSION)),)
+  iocshutils_VERSION=$(IOCSHUTILS_DEP_VERSION)
+endif
+
+
 # Since this file (cow.Makefile) is copied into
 # the module directory at build-time, these paths have to be relative
 # to that path
-APP := cowApp
+APP := .
 APPDB := $(APP)/Db
 APPSRC := $(APP)/src
 
@@ -48,6 +59,8 @@ APPSRC := $(APP)/src
 TEMPLATES += $(wildcard $(APPDB)/*.db)
 TEMPLATES += $(wildcard $(APPDB)/*.proto)
 TEMPLATES += $(wildcard $(APPDB)/*.template)
+
+DBDS += $(wildcard $(APPDB)/*.dbd)
 
 SCRIPTS += $(wildcard ../iocsh/*.iocsh)
 

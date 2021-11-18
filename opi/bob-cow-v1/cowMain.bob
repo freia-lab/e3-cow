@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>2260</width>
+  <height>1050</height>
+  <actions>
+  </actions>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabbed Container</name>
+    <tabs>
+      <tab>
+        <name>System Overview</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display_3</name>
+            <file>CoW-PID.bob</file>
+            <width>1872</width>
+            <height>1015</height>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Transitions</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display</name>
+            <file>support/transitions.bob</file>
+            <width>1872</width>
+            <height>1015</height>
+            <visible>false</visible>
+          </widget>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container_1</name>
+            <x>8</x>
+            <width>1870</width>
+            <height>1018</height>
+            <actions>
+            </actions>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Diagnostics</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display_2</name>
+            <file>support/cowDiagnostics.bob</file>
+            <width>1872</width>
+            <height>1015</height>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>350</x>
+    <width>1900</width>
+    <height>1050</height>
+    <font>
+      <font family="Source Sans Pro" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <tab_height>10</tab_height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    FIM Status</name>
+    <x>12</x>
+    <y>662</y>
+    <width>328</width>
+    <height>189</height>
+    <visible>false</visible>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_200</name>
+      <text>Read-back HV-ON from FIM</text>
+      <x>126</x>
+      <y>24</y>
+      <width>190</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_201</name>
+      <text>Read-back RF-ON from FIM</text>
+      <x>126</x>
+      <y>54</y>
+      <width>190</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_202</name>
+      <text>HVON command to FIM</text>
+      <x>126</x>
+      <y>84</y>
+      <width>190</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_203</name>
+      <text>RFON command to FIM</text>
+      <x>126</x>
+      <y>114</y>
+      <width>190</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(PREFIX):RFS-FIM-110:HVena-INT-RB</pv_name>
+      <x>20</x>
+      <y>24</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OFF" red="90" green="110" blue="90">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_1</name>
+      <pv_name>DISABLE</pv_name>
+      <x>20</x>
+      <y>54</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OFF" red="90" green="110" blue="90">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(PREFIX):RFS-FIM-120:HVcmd-INT-RB</pv_name>
+      <x>20</x>
+      <y>84</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OFF" red="90" green="110" blue="90">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>DISABLE</pv_name>
+      <x>20</x>
+      <y>114</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OFF" red="90" green="110" blue="90">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    CPU Status</name>
+    <x>12</x>
+    <y>431</y>
+    <width>328</width>
+    <height>219</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_134</name>
+      <text>CPU Interlock/Alarm</text>
+      <x>137</x>
+      <y>14</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_135</name>
+      <text>Warning - Ack Req</text>
+      <x>137</x>
+      <y>44</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_146</name>
+      <text>Latch mode</text>
+      <x>137</x>
+      <y>74</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_147</name>
+      <text>ForceON status</text>
+      <x>137</x>
+      <y>104</y>
+      <width>135</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(PREFIX):CPU-INTRLCK-RB</pv_name>
+      <x>20</x>
+      <y>14</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ERROR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+CPU Interlock/alarm </tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>$(PREFIX):CPU-WRNACKREQ-RB</pv_name>
+      <x>20</x>
+      <y>44</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+One or more signals are being interlocked or may require an acknowledge.</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(PREFIX):CPU-LTCHMD-RB</pv_name>
+      <x>20</x>
+      <y>74</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+The CPU latches the interlock until a reset is applied</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(PREFIX):CPU-FRCACT-RB</pv_name>
+      <x>20</x>
+      <y>104</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <tooltip>$(pv_name)
+$(pv_value)
+One or more signals are being simulated</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>RESET_BUTTON_1</name>
+      <pv_name>$(PREFIX):CPU-RST</pv_name>
+      <x>20</x>
+      <y>143</y>
+      <width>95</width>
+      <off_label>Reset</off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label>Reset</on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Reset all non-active interlocks</tooltip>
+      <show_confirm_dialog>2</show_confirm_dialog>
+      <confirm_message>This will reset all non-active interlocks</confirm_message>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_2</name>
+      <pv_name>$(PREFIX):CPU-TEST-ALL-ADS</pv_name>
+      <x>137</x>
+      <y>143</y>
+      <width>95</width>
+      <visible>false</visible>
+      <off_label>AD Test</off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label>AD Test</on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+        </action>
+      </actions>
+      <show_confirm_dialog>2</show_confirm_dialog>
+      <confirm_message>This will test the arc detectors and will generate interlocks</confirm_message>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>     Machine State</name>
+    <x>12</x>
+    <y>10</y>
+    <width>328</width>
+    <height>410</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="combo" version="2.0.0">
+      <name>Device prefix combo_2</name>
+      <pv_name>$(PREFIX):CPU-OPMODE</pv_name>
+      <x>147</x>
+      <y>61</y>
+      <width>140</width>
+      <height>27</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Change the Operation mode of the Amplifier</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_149</name>
+      <class>SECTION</class>
+      <text>Operation Mode</text>
+      <x>19</x>
+      <y>61</y>
+      <width>118</width>
+      <height>22</height>
+      <font>
+        <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_34</name>
+      <pv_name>$(PREFIX):CPU-OPMODE-RB</pv_name>
+      <x>147</x>
+      <y>102</y>
+      <width>125</width>
+      <height>22</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <tooltip>$(pv_name)
+$(pv_value)
+Operation Mode read-back</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_36</name>
+      <pv_name>$(PREFIX):CPU-OPMODE-RB</pv_name>
+      <x>19</x>
+      <y>102</y>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>19</x>
+      <y>133</y>
+      <width>293</width>
+      <height>244</height>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set amplifier to AUX</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-AUX</pv_name>
+        <text>AUX</text>
+        <x>1</x>
+        <y>56</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_7</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set Filament ON</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-FIL</pv_name>
+        <text>FIL</text>
+        <x>101</x>
+        <y>56</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_8</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set Solenoids ON</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-STDBY</pv_name>
+        <text>STDBY</text>
+        <x>201</x>
+        <y>56</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_9</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set amplifier OFF</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-OFF</pv_name>
+        <text>OFF</text>
+        <x>201</x>
+        <y>137</y>
+        <width>80</width>
+        <background_color>
+          <color name="STOP" red="222" green="33" blue="22">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_10</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set amplifier to HVON</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-HVON</pv_name>
+        <text>HVON</text>
+        <x>1</x>
+        <y>137</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_11</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>$(pv_name)</pv_name>
+            <value>1</value>
+            <description>Set amplifier to RFON</description>
+          </action>
+        </actions>
+        <pv_name>$(PREFIX):CPU-RFON</pv_name>
+        <text>RFON</text>
+        <x>101</x>
+        <y>137</y>
+        <width>80</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_14</name>
+        <pv_name>$(PREFIX):CPU-AUXMIPRCND-RB</pv_name>
+        <x>1</x>
+        <y>90</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_23</name>
+        <pv_name>$(PREFIX):CPU-FILMIPRCND-RB</pv_name>
+        <x>101</x>
+        <y>90</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_25</name>
+        <pv_name>$(PREFIX):CPU-AUXMISUCND-RB</pv_name>
+        <x>1</x>
+        <y>37</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_26</name>
+        <pv_name>$(PREFIX):CPU-FILMISUCND-RB</pv_name>
+        <x>101</x>
+        <y>37</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_27</name>
+        <pv_name>$(PREFIX):CPU-STBYMISUCND-RB</pv_name>
+        <x>201</x>
+        <y>37</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_28</name>
+        <pv_name>$(PREFIX):CPU-STBYMIPRCND-RB</pv_name>
+        <x>201</x>
+        <y>90</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_29</name>
+        <pv_name>$(PREFIX):CPU-HVENMIPRCND-RB</pv_name>
+        <x>1</x>
+        <y>170</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_30</name>
+        <pv_name>$(PREFIX):CPU-RFENMIPRCND-RB</pv_name>
+        <x>101</x>
+        <y>171</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_31</name>
+        <pv_name>$(PREFIX):CPU-RFENMISUCND-RB</pv_name>
+        <x>101</x>
+        <y>119</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_32</name>
+        <pv_name>$(PREFIX):CPU-HVENMISUCND-RB</pv_name>
+        <x>1</x>
+        <y>119</y>
+        <width>80</width>
+        <height>14</height>
+        <font>
+          <font family="Source Sans Pro" style="REGULAR" size="12.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="alarmRule" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="ON" red="70" green="255" blue="70">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_151</name>
+        <class>SECTION</class>
+        <text>Set Machine State commands</text>
+        <width>237</width>
+        <height>22</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+        <actions>
+        </actions>
+      </widget>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle</name>
+        <x>1</x>
+        <y>199</y>
+        <width>292</width>
+        <height>45</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Background" red="220" green="225" blue="221">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <corner_width>5</corner_width>
+        <corner_height>5</corner_height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_35</name>
+        <pv_name>$(PREFIX):CPU-STATE-RB</pv_name>
+        <x>148</x>
+        <y>211</y>
+        <width>80</width>
+        <height>22</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <tooltip>$(pv_name)
+$(pv_value)
+Attempting to reach</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_152</name>
+        <class>SECTION</class>
+        <text>Set State</text>
+        <x>21</x>
+        <y>211</y>
+        <width>103</width>
+        <height>22</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+        <actions>
+        </actions>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>19</x>
+      <y>24</y>
+      <width>208</width>
+      <height>22</height>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>$(PREFIX):CPU-ACTSTATE-RB</pv_name>
+        <x>128</x>
+        <width>80</width>
+        <height>22</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <tooltip>$(pv_name)
+$(pv_value)
+Actual Machine State read-back</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_144</name>
+        <class>SECTION</class>
+        <text>Actual State</text>
+        <width>103</width>
+        <height>22</height>
+        <font>
+          <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+        <actions>
+        </actions>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>   RecCaster Status</name>
+    <x>10</x>
+    <y>660</y>
+    <width>328</width>
+    <height>110</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label_136</name>
+      <text>State</text>
+      <x>150</x>
+      <y>14</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_137</name>
+      <text>Info Message</text>
+      <x>150</x>
+      <y>44</y>
+      <width>150</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(PREFIX)-Ctrl:RecCaster:State-Sts</pv_name>
+      <x>20</x>
+      <y>14</y>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ERROR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX)-Ctrl:RecCaster:Msg-I</pv_name>
+      <x>20</x>
+      <y>44</y>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pvStr0==&quot;Synchronized&quot;">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+  </widget>
+</display>

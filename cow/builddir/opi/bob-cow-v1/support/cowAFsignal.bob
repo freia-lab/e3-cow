@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>cowAF</name>
+  <width>710</width>
+  <height>570</height>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PV name: $(PREFIX)$(SGNL)</text>
+    <x>10</x>
+    <width>680</width>
+    <height>80</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Signal description:</text>
+    <x>10</x>
+    <y>50</y>
+    <width>180</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_16</name>
+    <pv_name>$(PREFIX)$(SGNL).DESC</pv_name>
+    <x>190</x>
+    <y>50</y>
+    <width>280</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Background" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Status Word</name>
+    <x>10</x>
+    <y>93</y>
+    <width>270</width>
+    <height>298</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_21</name>
+      <pv_name>$(PREFIX)$(SGNL)-INT-RB</pv_name>
+      <x>160</x>
+      <y>24</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_220</name>
+      <text>Interlock</text>
+      <x>19</x>
+      <y>24</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_226</name>
+      <text>Signal simulated</text>
+      <x>19</x>
+      <y>84</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_229</name>
+      <text>Cannot simulate</text>
+      <x>19</x>
+      <y>114</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_231</name>
+      <text>N-latched</text>
+      <x>19</x>
+      <y>144</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_25</name>
+      <pv_name>$(PREFIX)$(SGNL)-FRC-RB</pv_name>
+      <x>160</x>
+      <y>84</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="colorRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_28</name>
+      <pv_name>$(PREFIX)$(SGNL)-NFRC-RB</pv_name>
+      <x>160</x>
+      <y>114</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="colorRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_29</name>
+      <pv_name>$(PREFIX)$(SGNL)-NLTCH-RB</pv_name>
+      <x>160</x>
+      <y>144</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="colorRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_232</name>
+      <text>Warning</text>
+      <x>19</x>
+      <y>54</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_30</name>
+      <pv_name>$(PREFIX)$(SGNL)-WRN-RB</pv_name>
+      <x>160</x>
+      <y>54</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>cpu_reset_1</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+          <description>CPU Reset</description>
+        </action>
+      </actions>
+      <pv_name>$(PREFIX):CPU-RST</pv_name>
+      <x>19</x>
+      <y>221</y>
+      <width>90</width>
+      <height>25</height>
+      <tooltip>$(actions)
+Reset all non active Interlocks</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_233</name>
+      <text>Clear all non active CPU Interlocks</text>
+      <x>19</x>
+      <y>191</y>
+      <width>231</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Monitoring</name>
+    <x>10</x>
+    <y>413</y>
+    <width>270</width>
+    <height>142</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="textupdate" version="2.0.0">
+      <name>raw_read_1</name>
+      <pv_name>$(PREFIX)$(SGNL)-VAL-RB</pv_name>
+      <x>120</x>
+      <y>51</y>
+      <width>130</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>egu_read_1</name>
+      <pv_name>$(PREFIX)$(SGNL).VAL</pv_name>
+      <x>120</x>
+      <y>15</y>
+      <width>130</width>
+      <height>25</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>egu_label_1</name>
+      <text>Engineering units </text>
+      <x>29</x>
+      <y>17</y>
+      <width>90</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>raw_label_1</name>
+      <text>Raw </text>
+      <x>29</x>
+      <y>51</y>
+      <width>116</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Signal settings</name>
+    <x>300</x>
+    <y>93</y>
+    <width>390</width>
+    <height>298</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>Label_227</name>
+      <text>Simulate signal</text>
+      <x>19</x>
+      <y>24</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>simulation_write_5</name>
+      <pv_name>$(PREFIX)$(SGNL)-FRC</pv_name>
+      <x>160</x>
+      <y>24</y>
+      <width>90</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Background" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_26</name>
+      <pv_name>$(PREFIX)$(SGNL)-SVAL-RB</pv_name>
+      <x>266</x>
+      <y>54</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_228</name>
+      <text>Simulate signal to</text>
+      <x>19</x>
+      <y>54</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>simulation_write_7</name>
+      <pv_name>$(PREFIX)$(SGNL)-SVAL</pv_name>
+      <x>160</x>
+      <y>54</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>hihi_label</name>
+      <text>Interlock - HIHI</text>
+      <x>19</x>
+      <y>144</y>
+      <width>115</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>hihi_write</name>
+      <pv_name>$(PREFIX)$(SGNL)-HIHI</pv_name>
+      <x>160</x>
+      <y>144</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>hihi_read</name>
+      <pv_name>$(PREFIX)$(SGNL).HIHI</pv_name>
+      <x>266</x>
+      <y>144</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>high_label</name>
+      <text>Warning - HIGH</text>
+      <x>19</x>
+      <y>174</y>
+      <width>115</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>high_read</name>
+      <pv_name>$(PREFIX)$(SGNL).HIGH</pv_name>
+      <x>266</x>
+      <y>174</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>low_label</name>
+      <text>Warning - LOW</text>
+      <x>19</x>
+      <y>204</y>
+      <width>115</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>low_write</name>
+      <pv_name>$(PREFIX)$(SGNL)-LOW</pv_name>
+      <x>160</x>
+      <y>204</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>low_read</name>
+      <pv_name>$(PREFIX)$(SGNL).LOW</pv_name>
+      <x>266</x>
+      <y>204</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>lolo_label</name>
+      <text>Interlock - LOLO</text>
+      <x>19</x>
+      <y>234</y>
+      <width>115</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>lolo_write</name>
+      <pv_name>$(PREFIX)$(SGNL)-LOLO</pv_name>
+      <x>160</x>
+      <y>234</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>lolo_read</name>
+      <pv_name>$(PREFIX)$(SGNL).LOLO</pv_name>
+      <x>266</x>
+      <y>234</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>adjusment_label</name>
+      <text>Adjustment offset </text>
+      <x>19</x>
+      <y>84</y>
+      <width>115</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>adjusment_write</name>
+      <pv_name>$(PREFIX)$(SGNL)-AOFF</pv_name>
+      <x>160</x>
+      <y>84</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>adjustment_read</name>
+      <pv_name>$(PREFIX)$(SGNL)-AOFF-RB</pv_name>
+      <x>266</x>
+      <y>84</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>high_write</name>
+      <pv_name>$(PREFIX)$(SGNL)-HIGH</pv_name>
+      <x>160</x>
+      <y>174</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline_1</name>
+      <x>19</x>
+      <y>123</y>
+      <width>335</width>
+      <height>1</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="335.0" y="1.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="102" green="102" blue="102">
+        </color>
+      </line_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Diagnostic</name>
+    <x>300</x>
+    <y>413</y>
+    <width>390</width>
+    <height>142</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>device_label_1</name>
+      <text>Device type </text>
+      <x>19</x>
+      <y>16</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>timestamp_label_1</name>
+      <text>Time-stamp</text>
+      <x>19</x>
+      <y>76</y>
+      <width>175</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>error_label_1</name>
+      <text>Error code </text>
+      <x>19</x>
+      <y>46</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>timestamp_read_1</name>
+      <text>######</text>
+      <x>160</x>
+      <y>76</y>
+      <width>193</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Read_Background" red="230" green="235" blue="232">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <scripts>
+        <script file="../scripts/formatTime.py">
+          <pv_name>$(PREFIX)$(SGNL)-TMSTMP-RB</pv_name>
+        </script>
+      </scripts>
+      <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>$(PREFIX)$(SGNL)-DTYP-RB</pv_name>
+      <x>160</x>
+      <y>16</y>
+      <width>109</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>$(PREFIX)$(SGNL)-ERR-RB</pv_name>
+      <x>160</x>
+      <y>46</y>
+      <width>109</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+</display>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(L)</text>
+    <x>5</x>
+    <y>10</y>
+    <width>85</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PREFIX)-$(SUBS):$(D).DESC</pv_name>
+    <x>200</x>
+    <y>10</y>
+    <width>200</width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(PREFIX)-$(SUBS):$(D)</pv_name>
+    <x>90</x>
+    <y>10</y>
+    <off_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ERROR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+  </widget>
+</display>

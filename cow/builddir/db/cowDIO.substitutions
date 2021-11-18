@@ -1,0 +1,251 @@
+global {PLC=PLCDIO}
+
+file "cowConn.template"
+{
+	pattern {SGNL}
+		{DIO}
+}
+
+file "cowDIOR.template"
+{
+	pattern	{SGNL,		SOFF,	ZNAM,	ONAM,	DESC}
+		 {TS740,	0,    	"OK",	"OVR_TEMP",	"Bit 0"}
+		 {EE-1:Remote,	12,    	"OK",	"ITLCK",	"Bit 1"}
+		 {EE-1:NoError,	24,    	"OK",	"ITLCK",	"Bit 2"}
+		 {EE-1:Closed,	36,    	"Closed","Open",	"Bit 3"}
+		 {EE-1:NoWarn,	48,   	"OK",	"ITLCK",	"Bit 4"}
+		 {EE-1:SPAstat,	60,   	"OK",	"ITLCK",	"Bit 5"}
+		 {PC-1:PwrFail,	72,    	"OK",	"ITLCK",	"Bit 6"}
+		 {PC-1:Connected,84,   	"OK",	"ITLCK",	"Bit 7"}
+		 {PC-1:sOn,	96,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
+		 {spare-1,	108,   	"OK",	"ITLCK",	"spare"}
+		 {spare-2,	120,   	"OK",	"ITLCK",	"spare"}
+		 {spare-3,	132,   	"OK",	"ITLCK",	"spare"}
+		 {spare-4,	144,   	"OK",	"ITLCK",	"spare"}
+		 {EmgcyBtn,	156,   	"OK",	"ITLCK",	"Emergency Button"}
+		 {QuenchStat,	168,   	"OK",	"Quench",	"Quench status"}
+		 {DAQ_OK,	180,   	"OK",	"ITLCK",	"DAQ status"}
+		 {EE-2:PwrPerm,	192,   	"OK",	"ITLCK",	"Enrgy Extr Pwr Permit"}
+		 {EE-2:Remote,	204,   	"OK",	"ITLCK",	"Enrgy Extr Remote stat"}
+		 {EE-2:NoError,	216,   	"OK",	"ITLCK",	"Enrgy Extr NoErr stat"}
+		 {EE-2:Closed,	228,   	"Closed","Open",	"Enrgy Extr Switch Closed"}
+		 {EE-2:NoWarn,	240,   	"OK",	"ITLCK",	"Enrgy Extr Warning"}
+		 {EE-2:SPAstat,	252,   	"OK",	"ITLCK",	"Slow Pwr Abort Stat"}
+		 {PC-2:PwrFail,	264,   	"OK",	"ITLCK",	"Pwr Conv. Pwr Fail"}
+		 {PC-2:Connected,276,  	"OK",	"ITLCK",	"Pwr Conv connected"}
+		 {PC-2:sOn,	288,   	"OFF",	"ON",		"Pwr Conv status ON/OFF"}
+		 {spare-5,	300,   	"OK",	"ITLCK",	"spare"}
+		 {spare-6,	312,   	"OK",	"ITLCK",	"spare"}
+		 {spare-7,	324,   	"OK",	"ITLCK",	"spare"}
+		 {spare-8,	336,   	"OK",	"ITLCK",	"spare"}
+		 {DC24V:Aux,	348,   	"OK",	"ITLCK",	"24V to the In/Out"}
+		 {DC24V:PLC,	360,   	"OK",	"ITLCK",	"24V to the PLC"}
+		 {Cbl:Pos,	372,   	"Park",	"Oper",		"Cable Position"}
+		 {EH740:cHtrOn,	384,   	"HtrOff"	"HtrOn",	"EH740 Heater On"}
+		 {EH641AC:cHtrOn,	396,   	"HtrOff","HtrOn",	"EH641AC Heater On"}
+		 {EH742AC:cHtrOn,	408,   	"HtrOff"	"HtrOn","EH742AC Heater On"}
+		 {PC-1:PERM,	420,   	"OK",	"ITLCK",	"Power Permit"}
+		 {PC-1:FastPA,	432,   	"OK",	"ITLCK",	"Fast Power Abort"}
+		 {spare-9,	444,   	"OK",	"ITLCK",	"spare"}
+		 {spare-10,	456,   	"OK",	"ITLCK",	"spare"}
+		 {spare-11,	468,   	"OK",	"ITLCK",	"spare"}
+		 {PC:DirectPA,	480,   	"OK",	"ITLCK",	"Direct Power Abort"}
+		 {spare-31,	492,   	"OFF",	"ON",		"spare"}
+		 {spare-32,	504,   	"OFF",	"ON",		"spare"}
+		 {spare-33,	516,   	"OFF",	"ON",		"spare"}
+		 {spare-12,	528,   	"OK",	"ITLCK",	"spare"}
+		 {spare-13,	540,   	"OK",	"ITLCK",	"spare"}
+		 {spare-14,	552,   	"OK",	"ITLCK",	"spare"}
+		 {spare-15,	564,   	"OK",	"ITLCK",	"spare"}
+		 {EE-2:OpenCmd,	576,   	"OK",	"ITLCK",	"Enrgy Extr Sw Open Cmd"}
+		 {EE-2:spare29,	588,   	"OK",	"ITLCK",	"spare"}
+		 {EE-2:spare30,	600,   	"OK",	"ITLCK",	"spare"}
+		 {PC-2:PERM,	612,   	"OK",	"ITLCK",	"Power Permit"}
+		 {PC-2:FastPA,	624,   	"OK",	"ITLCK",	"Fast Power Abort"}
+		 {spare-16,	636,   	"OK",	"ITLCK",	"spare"}
+		 {spare-17,	648,   	"OK",	"ITLCK",	"spare"}
+		 {spare-18,	660,   	"OK",	"ITLCK",	"spare"}
+		 {spare-19,	672,   	"OK",	"ITLCK",	"spare"}
+		 {spare-20,	684,   	"OK",	"ITLCK",	"spare"}
+		 {spare-21,	696,   	"OK",	"ITLCK",	"spare"}
+		 {spare-22,	708,   	"OK",	"ITLCK",	"spare"}
+		 {spare-23,	720,   	"OK",	"ITLCK",	"spare"}
+		 {spare-24,	732,   	"OK",	"ITLCK",	"spare"}
+		 {spare-25,	744,   	"OK",	"ITLCK",	"spare"}
+		 {CRYO_LEADS_OK,756,   	"OK",	"ITLCK",	"Cryo Curr. Leads"}
+		 {LEAD1:T_OK,	768,   	"OK",	"ITLCK",	"Lead 1 Temperature OK"}
+		 {LEAD2:T_OK,	780,   	"OK",	"ITLCK",	"Lead 2 Temperature OK"}
+		 {LEAD3:T_OK,	792,   	"OK",	"ITLCK",	"Lead 3 Temperature OK"}
+		 {LEAD4:T_OK,	804,   	"OK",	"ITLCK",	"Lead 4 Temperature OK"}
+		 {CRYO_1_9K,	816,   	"OK",	"ITLCK",	"Cryo @ 1.9 K"}
+		 {CRYO_4_5K,	828,   	"OK",	"ITLCK",	"Cryo @ 4.5 K"}
+		 {CRYO_300K_He,	840,   	"OK",	"ITLCK",	"Cryo @ 300 K He"}
+		 {CRYO_300_K_Air,852,   "OK",	"ITLCK",	"Cryo @ 300 K Air"}
+		 {LEAD1:V_OK,	864,   	"OK",	"ITLCK",	"Lead 1 Voltage OK"}
+		 {LEAD2:V_OK,	876,   	"OK",	"ITLCK",	"Lead 2 Voltage OK"}
+		 {LEAD3:V_OK,	888,   	"OK",	"ITLCK",	"Lead 3 Voltage OK"}
+		 {LEAD4:V_OK,	900,   	"OK",	"ITLCK",	"Lead 4 Voltage OK"}
+}
+
+file "cowDIOW.template"
+{
+	pattern	 {SGNL, 	SOFF}
+		 {TS740,	0}
+		 {EE-1:Remote,	2}
+		 {EE-1:NoError,	4}
+		 {EE-1:Closed,	6}
+		 {EE-1:NoWarn,	8}
+		 {EE-1:SPAstat,	10}
+		 {PC-1:PwrFail,	12}
+		 {PC-1:Connected,14}
+		 {PC-1:sOn,	16}
+		 {spare-1,	18}
+		 {spare-2,	20}
+		 {spare-3,	22}
+		 {spare-4,	24}
+		 {EmgcyBtn,	26}
+		 {QuenchStat,	28}
+		 {DAQ_OK,	30}
+		 {EE-2:PwrPerm,	32}
+		 {EE-2:Remote,	34}
+		 {EE-2:NoError,	36}
+		 {EE-2:Closed,	38}
+		 {EE-2:NoWarn,	40}
+		 {EE-2:SPAstat,	42}
+		 {PC-2:PwrFail,	44}
+		 {PC-2:Connected,46}
+		 {PC-2:sOn,	48}
+		 {spare-5,	50}
+		 {spare-6,	52}
+		 {spare-7,	54}
+		 {spare-8,	56}
+		 {DC24V:Aux,	58}
+		 {DC24V:PLC,	60}
+		 {Cbl:Pos,	62}
+		 {EH740:cHtrOn,	64}
+		 {EH641AC:cHtrOn,  66}
+		 {EH742AC:cHtrOn,	68}
+		 {PC-1:PERM,	70}
+		 {PC-1:FastPA,	72}
+		 {spare-9,	74}
+		 {spare-10,	76}
+		 {spare-11,	78}
+		 {PC:DirectPA,	80}
+		 {spare-31,	82}
+		 {spare-32,	84}
+		 {spare-33,	86}
+		 {spare-12,	88}
+		 {spare-13,	90}
+		 {spare-14,	92}
+		 {spare-15,	94}
+		 {EE-2:OpenCmd,	96}
+		 {EE-2:spare29, 98}
+		 {EE-2:spare30,	100}
+		 {PC-2:PERM,	102}
+		 {PC-2:FastPA,	104}
+		 {spare-16,	106}
+		 {spare-17,	108}
+		 {spare-18,	110}
+		 {spare-19,	112}
+		 {spare-20,	114}
+		 {spare-21,	116}
+		 {spare-22,	118}
+		 {spare-23,	120}
+		 {spare-24,	122}
+		 {spare-25,	124}
+		 {CRYO_LEADS_OK,126}
+		 {LEAD1:T_OK,	128}
+		 {LEAD2:T_OK,	130}
+		 {LEAD3:T_OK,	132}
+		 {LEAD4:T_OK,	134}
+		 {CRYO_1_9K,	136}
+		 {CRYO_4_5K,	138}
+		 {CRYO_300K_He,	140}
+		 {CRYO_300_K_Air,142}
+		 {LEAD1:V_OK,	144}
+		 {LEAD2:V_OK,	146}
+		 {LEAD3:V_OK,	148}
+		 {LEAD4:V_OK,	150}
+}
+
+
+file "cowDIOInternal.template"
+{
+	pattern  {SGNL}
+		 {TS740}
+		 {EE-1:Remote}
+		 {EE-1:NoError}
+		 {EE-1:Closed}
+		 {EE-1:NoWarn}
+		 {EE-1:SPAstat}
+		 {PC-1:PwrFail}
+		 {PC-1:Connected}
+		 {PC-1:sOn}
+		 {spare-1}
+		 {spare-2}
+		 {spare-3}
+		 {spare-4}
+		 {EmgcyBtn}
+		 {QuenchStat}
+		 {DAQ_OK}
+		 {EE-2:PwrPerm}
+		 {EE-2:Remote}
+		 {EE-2:NoError}
+		 {EE-2:Closed}
+		 {EE-2:NoWarn}
+		 {EE-2:SPAstat}
+		 {PC-2:PwrFail}
+		 {PC-2:Connected}
+		 {PC-2:sOn}
+		 {spare-5}
+		 {spare-6}
+		 {spare-7}
+		 {spare-8}
+		 {DC24V:Aux}
+		 {DC24V:PLC}
+		 {Cbl:Pos}
+		 {EH740:cHtrOn}
+		 {EH641AC:cHtrOn}
+		 {EH742AC:cHtrOn}
+		 {PC-1:PERM}
+		 {PC-1:FastPA}
+		 {spare-9}
+		 {spare-10}
+		 {spare-11}
+		 {PC:DirectPA}
+		 {spare-31}
+		 {spare-32}
+		 {spare-33}
+		 {spare-12}
+		 {spare-13}
+		 {spare-14}
+		 {spare-15}
+		 {EE-2:OpenCmd}
+		 {EE-2:spare29}
+		 {EE-2:spare30}
+		 {PC-2:PERM}
+		 {PC-2:FastPA}
+		 {spare-16}
+		 {spare-17}
+		 {spare-18}
+		 {spare-19}
+		 {spare-20}
+		 {spare-21}
+		 {spare-22}
+		 {spare-23}
+		 {spare-24}
+		 {spare-25}
+		 {CRYO_LEADS_OK}
+		 {LEAD1:T_OK}
+		 {LEAD2:T_OK}
+		 {LEAD3:T_OK}
+		 {LEAD4:T_OK}
+		 {CRYO_1_9K}
+		 {CRYO_4_5K}
+		 {CRYO_300K_He}
+		 {CRYO_300_K_Air}
+		 {LEAD1:V_OK}
+		 {LEAD2:V_OK}
+		 {LEAD3:V_OK}
+		 {LEAD4:V_OK}
+}

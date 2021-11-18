@@ -1,0 +1,10 @@
+record(seq, "$(PREFIX):$(SGNL)-OPMODE-INT")
+{
+	field(DO2,  "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-OPMODE-RB")
+	field(DO3,  "1")
+
+	field(LNK2, "$(PREFIX):$(SGNL)-OPMODE.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-OPMODE PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-OPMODE-INT.DISA")
+}

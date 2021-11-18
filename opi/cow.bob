@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>CoW</name>
+  <macros>
+    <PREFIX>CoW</PREFIX>
+  </macros>
+  <width>2350</width>
+  <height>1130</height>
+  <background_color>
+    <color red="215" green="215" blue="215">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label_94</name>
+    <text>CoW - Cryostat on Wheels</text>
+    <x>150</x>
+    <y>5</y>
+    <width>2192</width>
+    <height>55</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="PRIMARY" red="0" green="148" blue="202">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <file>bob-cow-v1/cowMain.bob</file>
+    <y>60</y>
+    <width>2342</width>
+    <height>1070</height>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Image</name>
+    <file>bob-cow-v1/support/images/FREIAlogo.png</file>
+    <x>10</x>
+    <y>10</y>
+    <width>130</width>
+    <height>50</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>sys://time</pv_name>
+    <x>2060</x>
+    <y>20</y>
+    <width>200</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+</display>

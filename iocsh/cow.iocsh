@@ -1,0 +1,55 @@
+# This should be the included snippet to configure and run the deployed IOC. It should be loaded with
+#
+#   iocshLoad("$(cow_DIR)/cow.iocsh")
+
+#- ###                CoW   iocsh                   ###
+#- ####################################################
+#- >> Mandatory
+#- COW_PREFIX	  - CoW PV's prefix
+#- PLC_IP         - AMI controller IP address
+#-
+#- >> Optional
+#- SCAN_PERIOD	  - SCAN field in the epics record, default 2
+#-
+#- https://
+#- 
+
+epicsEnvSet("PREFIX", "$(COW_PREFIX=CoW)")
+epicsEnvSet("PLCIP", "$(COW_IP=192.168.1.70)")
+
+## Datablocks
+epicsEnvSet("TCPPORTCPU", "3000")
+epicsEnvSet("PLCPORTCPU", "PLCCPU")
+epicsEnvSet("INSIZECPU", "8")
+epicsEnvSet("OUTSIZECPU", "4")
+
+epicsEnvSet("TCPPORTAF", "3001")
+epicsEnvSet("PLCPORTAF", "PLCAF")
+epicsEnvSet("INSIZEAF", "1232")
+epicsEnvSet("OUTSIZEAF", "728")
+
+epicsEnvSet("TCPPORTDIO", "3002")
+epicsEnvSet("PLCPORTDIO", "PLCDIO")
+epicsEnvSet("INSIZEDIO", "912")
+epicsEnvSet("OUTSIZEDIO", "152")
+
+epicsEnvSet("TCPPORTINSTR", "3003")
+epicsEnvSet("PLCPORTINSTR", "PLCINSTR")
+epicsEnvSet("INSIZEINSTR", "430")
+epicsEnvSet("OUTSIZEINSTR", "256")
+
+s7plcConfigure("$(PLCPORTCPU)","$(PLCIP)",$(TCPPORTCPU),$(INSIZECPU),$(OUTSIZECPU),1,2500,500)
+s7plcConfigure("$(PLCPORTAF)","$(PLCIP)",$(TCPPORTAF),$(INSIZEAF),$(OUTSIZEAF),1,2500,500)
+s7plcConfigure("$(PLCPORTDIO)","$(PLCIP)",$(TCPPORTDIO),$(INSIZEDIO),$(OUTSIZEDIO),1,2500,500)
+s7plcConfigure("$(PLCPORTINSTR)","$(PLCIP)",$(TCPPORTINSTR),$(INSIZEINSTR),$(OUTSIZEINSTR),1,2500,500)
+
+# Add the breakpoint tables
+updateMenuConvert()
+
+addScan(60)
+addScan(300)
+
+dbLoadRecords(cowCPU.db, "PREFIX=$(PREFIX)")
+dbLoadRecords(cowAF.db, "PREFIX=$(PREFIX)")
+dbLoadRecords(cowDIO.db, "PREFIX=CoW-LHe")
+dbLoadRecords(cowINSTR.db, "PREFIX=$(PREFIX)")

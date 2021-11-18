@@ -1,0 +1,1685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1865</width>
+  <height>1000</height>
+  <actions>
+  </actions>
+  <widget type="picture" version="2.0.0">
+    <name>Image</name>
+    <file>images/RF_LPS_Layout_UI.png</file>
+    <x>171</x>
+    <y>10</y>
+    <width>909</width>
+    <height>865</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_1</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polygon" version="2.0.0">
+    <name>Polygon_2</name>
+    <height>100</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="128" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <height>100</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="30" green="144" blue="255">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_228</name>
+    <text></text>
+    <x>33</x>
+    <y>57</y>
+    <width>297</width>
+    <height>43</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="IO Label" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Read_Background" red="230" green="235" blue="232">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+
+if PVUtil.getString(pvs[0]) == 'TS1-010RFC':
+    widget.setPropertyValue('text', "Toshiba Klystron")
+else:
+    widget.setPropertyValue('text', "No Klystron configured")]]></text>
+        <pv_name>loc://cowPrefix</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_15</name>
+    <pv_name>$(PREFIX):RFS-Oil-110:TT</pv_name>
+    <x>440</x>
+    <y>700</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(PREFIX):RFS-Oil-110:TT-INT-RB</pv_name>
+        <pv_name>$(PREFIX):RFS-Oil-110:TT-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Filament</name>
+    <x>1080</x>
+    <y>57</y>
+    <width>320</width>
+    <height>293</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Power</text>
+      <x>19</x>
+      <y>14</y>
+      <width>80</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):FILAMENT-WMON-RB</pv_name>
+      <x>19</x>
+      <y>39</y>
+      <width>80</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current</text>
+      <x>155</x>
+      <y>14</y>
+      <width>80</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):FILAMENT-IMON-RB</pv_name>
+      <x>155</x>
+      <y>39</y>
+      <width>80</width>
+      <height>25</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_7</name>
+      <actions>
+        <action type="open_display">
+          <file>cowFILsignal.bob</file>
+          <macros>
+            <SGNL>FILAMENT</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Open expert display</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>258</x>
+      <y>39</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_35</name>
+      <pv_name>$(PREFIX):FILAMENT-TWARMT-RB</pv_name>
+      <x>152</x>
+      <y>229</y>
+      <width>90</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_179</name>
+      <text>Total warm time left</text>
+      <x>19</x>
+      <y>229</y>
+      <width>133</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_42</name>
+      <pv_name>$(PREFIX):FILAMENT-STARTED-RB</pv_name>
+      <x>152</x>
+      <y>194</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_43</name>
+      <pv_name>$(PREFIX):FILAMENT-TEMPREACHED-RB</pv_name>
+      <x>152</x>
+      <y>164</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="colorRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_44</name>
+      <pv_name>$(PREFIX):FILAMENT-LOCREM-RB</pv_name>
+      <x>152</x>
+      <y>134</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="colorRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="ORANGE" red="254" green="194" blue="81">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_51</name>
+      <pv_name>$(PREFIX):FILAMENT-WARMUP-RB</pv_name>
+      <x>152</x>
+      <y>104</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_52</name>
+      <pv_name>$(PREFIX):FILAMENT-INT-RB</pv_name>
+      <x>152</x>
+      <y>74</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_214</name>
+      <text>Interlock</text>
+      <x>19</x>
+      <y>74</y>
+      <width>117</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_233</name>
+      <text>Ramp/Step status</text>
+      <x>19</x>
+      <y>104</y>
+      <width>117</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_234</name>
+      <text>Local/Remote</text>
+      <x>19</x>
+      <y>134</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_235</name>
+      <text>FIL temp reached</text>
+      <x>19</x>
+      <y>164</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_236</name>
+      <text>Start command</text>
+      <x>19</x>
+      <y>194</y>
+      <width>115</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>$(PREFIX):RFS-Oil-110:TT.DESC</pv_name>
+    <x>320</x>
+    <y>700</y>
+    <width>110</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Solenoid-01</name>
+    <x>1080</x>
+    <y>370</y>
+    <width>320</width>
+    <height>165</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status</name>
+      <text>PSU Status</text>
+      <x>19</x>
+      <y>73</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(PREFIX):SOLENOID01-IMON-RB</pv_name>
+      <x>152</x>
+      <y>44</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_131</name>
+      <text>Current</text>
+      <x>19</x>
+      <y>44</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(PREFIX):SOLENOID01-VMON-RB</pv_name>
+      <x>152</x>
+      <y>19</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_130</name>
+      <text>Voltage</text>
+      <x>19</x>
+      <y>19</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_64</name>
+      <pv_name>$(PREFIX):SOLENOID01-STARTED-RB</pv_name>
+      <x>152</x>
+      <y>73</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_215</name>
+      <text>Interlock</text>
+      <x>19</x>
+      <y>101</y>
+      <width>117</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_65</name>
+      <pv_name>$(PREFIX):SOLENOID01-INT-RB</pv_name>
+      <x>152</x>
+      <y>101</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_8</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID01</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>258</x>
+      <y>19</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Solenoid-03</name>
+    <x>1080</x>
+    <y>550</y>
+    <width>320</width>
+    <height>165</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status_1</name>
+      <text>PSU Status</text>
+      <x>19</x>
+      <y>78</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_66</name>
+      <pv_name>$(PREFIX):SOLENOID02-IMON-RB</pv_name>
+      <x>152</x>
+      <y>49</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_218</name>
+      <text>Current</text>
+      <x>19</x>
+      <y>49</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_67</name>
+      <pv_name>$(PREFIX):SOLENOID02-VMON-RB</pv_name>
+      <x>152</x>
+      <y>24</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_219</name>
+      <text>Voltage</text>
+      <x>19</x>
+      <y>24</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_68</name>
+      <pv_name>$(PREFIX):SOLENOID02-STARTED-RB</pv_name>
+      <x>152</x>
+      <y>78</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_220</name>
+      <text>Interlock</text>
+      <x>19</x>
+      <y>106</y>
+      <width>117</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_69</name>
+      <pv_name>$(PREFIX):SOLENOID02-INT-RB</pv_name>
+      <x>152</x>
+      <y>106</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_11</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID02</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>258</x>
+      <y>24</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>    Solenoid-03</name>
+    <x>1080</x>
+    <y>735</y>
+    <width>320</width>
+    <height>165</height>
+    <style>1</style>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
+      </color>
+    </foreground_color>
+    <widget type="label" version="2.0.0">
+      <name>psu_on_status_2</name>
+      <text>PSU Status</text>
+      <x>19</x>
+      <y>72</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_70</name>
+      <pv_name>$(PREFIX):SOLENOID03-IMON-RB</pv_name>
+      <x>152</x>
+      <y>43</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_225</name>
+      <text>Current</text>
+      <x>19</x>
+      <y>43</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_71</name>
+      <pv_name>$(PREFIX):SOLENOID03-VMON-RB</pv_name>
+      <x>152</x>
+      <y>18</y>
+      <width>80</width>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_226</name>
+      <text>Voltage</text>
+      <x>19</x>
+      <y>18</y>
+      <width>120</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_72</name>
+      <pv_name>$(PREFIX):SOLENOID03-STARTED-RB</pv_name>
+      <x>152</x>
+      <y>72</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OFF" red="169" green="169" blue="169">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_227</name>
+      <text>Interlock</text>
+      <x>19</x>
+      <y>101</y>
+      <width>117</width>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_73</name>
+      <pv_name>$(PREFIX):SOLENOID03-INT-RB</pv_name>
+      <x>152</x>
+      <y>101</y>
+      <width>90</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="alarmRule" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==1">
+            <value>
+              <color name="MAJOR" red="252" green="13" blue="27">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==0">
+            <value>
+              <color name="OK" red="61" green="216" blue="61">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_12</name>
+      <actions>
+        <action type="open_display">
+          <file>cowSOLsignal.bob</file>
+          <macros>
+            <SGNL>SOLENOID03</SGNL>
+          </macros>
+          <target>window</target>
+          <description>Change PV settings</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>258</x>
+      <y>18</y>
+      <width>35</width>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>570</x>
+    <y>410</y>
+    <width>151</width>
+    <height>55</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_25</name>
+    <pv_name>$(PREFIX):RFS-VacPS-110:I</pv_name>
+    <x>628</x>
+    <y>428</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(PREFIX):RFS-VacPS-110:I-INT-RB</pv_name>
+        <pv_name>$(PREFIX):RFS-VacPS-110:I-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>$(PREFIX):RFS-VacPS-110:HVena</pv_name>
+    <x>590</x>
+    <y>428</y>
+    <off_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(PREFIX):RFS-VacPS-110</text>
+    <x>540</x>
+    <y>380</y>
+    <width>210</width>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_26</name>
+    <pv_name>$(PREFIX):RFS-Coll-110:TC_TOP</pv_name>
+    <x>298</x>
+    <y>267</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_27</name>
+    <pv_name>$(PREFIX):RFS-Coll-110:TC_TOP.DESC</pv_name>
+    <x>140</x>
+    <y>267</y>
+    <width>148</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_28</name>
+    <pv_name>$(PREFIX):RFS-Coll-120:TC_EDGE</pv_name>
+    <x>298</x>
+    <y>298</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_29</name>
+    <pv_name>$(PREFIX):RFS-Coll-120:TC_EDGE.DESC</pv_name>
+    <x>140</x>
+    <y>298</y>
+    <width>148</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_30</name>
+    <pv_name>$(PREFIX):RFS-Body-110:TT.DESC</pv_name>
+    <x>55</x>
+    <y>400</y>
+    <width>170</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_31</name>
+    <pv_name>$(PREFIX):RFS-Body-110:TT</pv_name>
+    <x>235</x>
+    <y>400</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_32</name>
+    <pv_name>$(PREFIX):RFS-Body-120:TT.DESC</pv_name>
+    <x>55</x>
+    <y>430</y>
+    <width>170</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_33</name>
+    <pv_name>$(PREFIX):RFS-Body-120:TT</pv_name>
+    <x>235</x>
+    <y>430</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_34</name>
+    <pv_name>$(PREFIX):RFS-Win-110:TT.DESC</pv_name>
+    <x>198</x>
+    <y>164</y>
+    <width>188</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_36</name>
+    <pv_name>$(PREFIX):RFS-Win-110:TT</pv_name>
+    <x>398</x>
+    <y>164</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_37</name>
+    <pv_name>$(PREFIX):RFS-Win-120:TT.DESC</pv_name>
+    <x>198</x>
+    <y>194</y>
+    <width>188</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_38</name>
+    <pv_name>$(PREFIX):RFS-Win-120:TT</pv_name>
+    <x>398</x>
+    <y>194</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_39</name>
+    <pv_name>$(PREFIX):RFS-Sol-110:TT.DESC</pv_name>
+    <x>55</x>
+    <y>479</y>
+    <width>170</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_40</name>
+    <pv_name>$(PREFIX):RFS-Sol-110:TT</pv_name>
+    <x>235</x>
+    <y>479</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_41</name>
+    <pv_name>$(PREFIX):RFS-Sol-120:TT.DESC</pv_name>
+    <x>55</x>
+    <y>509</y>
+    <width>170</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_45</name>
+    <pv_name>$(PREFIX):RFS-Sol-120:TT</pv_name>
+    <x>235</x>
+    <y>509</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_46</name>
+    <pv_name>$(PREFIX):RFS-Sol-130:TT.DESC</pv_name>
+    <x>55</x>
+    <y>540</y>
+    <width>170</width>
+    <transparent>true</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_47</name>
+    <pv_name>$(PREFIX):RFS-Sol-130:TT</pv_name>
+    <x>235</x>
+    <y>540</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)-INT-RB</pv_name>
+        <pv_name>$(pv_name)-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <x>570</x>
+    <y>511</y>
+    <width>151</width>
+    <height>55</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_48</name>
+    <pv_name>$(PREFIX):RFS-VacPS-120:I</pv_name>
+    <x>628</x>
+    <y>529</y>
+    <width>75</width>
+    <foreground_color>
+      <color name="BLACK" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="WHITE" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="MAJOR" red="252" green="13" blue="27">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>
+            <color name="ORANGE" red="254" green="194" blue="81">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="(pv0==0) &amp;&amp; (pv1==0)">
+          <value>
+            <color name="GREEN" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(PREFIX):RFS-VacPS-120:I-INT-RB</pv_name>
+        <pv_name>$(PREFIX):RFS-VacPS-120:I-WRN-RB</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_16</name>
+    <pv_name>$(PREFIX):RFS-VacPS-120:HVena</pv_name>
+    <x>590</x>
+    <y>529</y>
+    <off_color>
+      <color name="OK" red="61" green="216" blue="61">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="252" green="13" blue="27">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>$(PREFIX):RFS-VacPS-120</text>
+    <x>540</x>
+    <y>481</y>
+    <width>210</width>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Example</text>
+    <x>490</x>
+    <y>287</y>
+    <width>532</width>
+    <height>90</height>
+    <font>
+      <font family="Source Sans Pro" style="REGULAR" size="72.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="RED" red="252" green="13" blue="27">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+</display>

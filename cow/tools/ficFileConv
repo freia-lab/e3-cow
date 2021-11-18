@@ -1,0 +1,71 @@
+#!/bin/bash
+#
+# Bash script to create epics breaktables for CERNOX
+# temperature probes
+#
+# Usage: Run the script by running "make calibration" in the top directory of the project.
+#        The measurement files need to reside in the calibrations directory with names
+#        starting with "CX*(1.5K"  for low temperature. The files for the same sensor 
+#        with other temperature ranges will be concatenated. 
+#        The resulting combined files are written to Db/cernox-breaktables.dbd
+#
+# Version: 1.0 181012 KF 
+#          1.1 181016 KF Added sorting and a combined file
+#          1.2 181017 KF Remove lines where temperature is not increasing
+#          2.0 181024 KF Adapt to Makefile use: Move tmp and out to /tmp
+#                        Write combined file to Db/cernox-breaktables.dbd
+#          2.1 181207 KG Changed the lookup table so the input value is in mohms instead of
+#                        ohms. It was needed for ai Raw Soft Channel record to work properly
+#                        (RVAL is an integer)
+#          3.0 210114 KG Can handle any number of calibration files but the file starting
+#                        with "CX*(1.5K" must exist. Other entry tha the calibration data 
+#                        MUST NOT start with a digit.
+
+
+if [ -d calibrations ]
+then
+cd calibrations
+else
+echo " calibration directory missing!"
+exit
+fi
+ 
+if [ -d /tmp/out ]
+then
+rm -r /tmp/out
+mkdir /tmp/out
+else
+mkdir /tmp/out
+fi
+
+# Loop over low temp files
+for f in CX*\(1.5K*; do
+
+    # Extract the breaktable filename
+    fout=$(echo "$f" | sed 's/(.*//')
+
+    # Create the breaktable and start line
+    echo "breaktable("$fout") {" | cat -> /tmp/out/"$fout"
+
+    #Create one data file for one sensor (concatenate all calibration files for one sensor)
+    # Write the sorted file, removing duplicates, to the output file
+    cat "$fout"* | sort -gru -k 1,1 | awk '/^[0123456789]/ && ($2 > prev) {print 1000.0*$1, $2 ; prev = $2}' | sed 's/+//' >> /tmp/out/"$fout"
+    echo "}" | cat - >> /tmp/out/"$fout"
+    echo "$f";
+done
+
+# Generate a combined file
+cat /tmp/out/* > ../Db/cernox-breaktables.dbd
+# Print some statistics
+echo -n -e " Total number of files \t\t\t"
+ls -l C* | wc -l 
+echo -n -e " Number of unique low temp files \t"  
+ls C*\(1.5K* | awk '!seen[$0]++' | wc -l
+echo -n -e " Number of different Cernox's \t\t"  
+ls C*\(1.5K* | sed 's/(.*//' | awk '!seen[$0]++' | wc -l
+echo -n -e " Number of generated files \t\t"      
+ls -l /tmp/out/C* | wc -l
+
+# Clean up
+rm -r /tmp/out
+exit

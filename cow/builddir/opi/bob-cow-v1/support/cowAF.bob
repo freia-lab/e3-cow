@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>CoW</P>
+    <SUBS></SUBS>
+  </macros>
+  <width>710</width>
+  <height>660</height>
+  <actions>
+  </actions>
+  <scripts>
+    <script file="../scripts/sgnl2Macro.py">
+      <pv_name>loc://cowAnalogSignal</pv_name>
+    </script>
+  </scripts>
+  <widget type="combo" version="2.0.0">
+    <name>Scan Combo</name>
+    <pv_name>loc://cowAnalogSignal("-LHe:TT641B")</pv_name>
+    <x>18</x>
+    <y>45</y>
+    <width>247</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="224" green="217" blue="202">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <items>
+      <item>-LHe:TT641B</item>
+      <item>-LHe:TT641C</item>
+      <item>-LHe:TT740</item>
+      <item>-LHe:TT742A</item>
+      <item>-LHe:TT742B</item>
+      <item>-LHe:TT742C</item>
+      <item>-LHe:PT660</item>
+      <item>-Vac:PT003</item>
+      <item>-Vac:PT004</item>
+      <item>-Vac:PT005</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Scan</name>
+    <pv_name>loc://cowAnalogSignal("TT641B")</pv_name>
+    <x>276</x>
+    <y>45</y>
+    <width>150</width>
+    <height>25</height>
+    <foreground_color>
+      <color name="IO Foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="IO Grid" red="215" green="215" blue="215">
+      </color>
+    </background_color>
+    <format>6</format>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>AI PV to display</text>
+    <x>18</x>
+    <y>10</y>
+    <width>247</width>
+    <height>33</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Connection Status</text>
+    <x>455</x>
+    <y>44</y>
+    <width>119</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <macros>
+      <PREFIX>$(P)$(SUBS)</PREFIX>
+    </macros>
+    <file>cowAFsignal.bob</file>
+    <y>90</y>
+    <width>710</width>
+    <height>570</height>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="clearBobRule" prop_id="file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <exp bool_exp="false">
+          <value></value>
+        </exp>
+        <pv_name>loc://cowAnalogSignal</pv_name>
+      </rule>
+      <rule name="setBobRule" prop_id="file" out_exp="false">
+        <exp bool_exp="true">
+          <value>cowAFsignal.bob</value>
+        </exp>
+        <pv_name>loc://cowAnalogSignal</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="../scripts/sgnl2Macro.py">
+        <pv_name>loc://cowAnalogSignal</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>$(PREFIX):AF-CONN</pv_name>
+    <x>590</x>
+    <y>44</y>
+    <width>107</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="alarmRule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>
+            <color name="OK" red="61" green="216" blue="61">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv0==0">
+          <value>
+            <color name="INVALID" red="149" green="110" blue="221">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+</display>
