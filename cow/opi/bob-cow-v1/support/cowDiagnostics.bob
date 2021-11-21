@@ -1192,8 +1192,21 @@
     <file>../ami-support/ami1700.bob</file>
     <x>970</x>
     <y>140</y>
-    <width>710</width>
+    <width>890</width>
     <height>600</height>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))
+#ipaddr = PVUtil.getString(pvs[0])
+#print ipaddr
+widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
+]]></text>
+        <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+      </script>
+    </scripts>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group_6</name>

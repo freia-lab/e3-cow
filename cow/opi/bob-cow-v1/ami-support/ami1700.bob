@@ -7,6 +7,7 @@
     <LABEL>CoW-$(DEV)</LABEL>
     <P>CoW-LHe</P>
   </macros>
+  <width>900</width>
   <height>700</height>
   <scripts>
     <script file="EmbeddedPy">
@@ -268,30 +269,23 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_2</name>
-    <actions execute_as_one="true">
-      <action type="open_webpage">
-        <url>http://$(URL)</url>
-        <description>Open Webpage</description>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Show Web Interface</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Hide Web Interface</description>
       </action>
     </actions>
-    <pv_name>$(P):$(DEV)-IPaddr</pv_name>
-    <text>Open Web Interface...</text>
-    <x>270</x>
+    <pv_name>loc://$(P):$(DEV)-visible(0)</pv_name>
+    <text>Show Web Interface...</text>
+    <x>240</x>
     <y>490</y>
-    <width>210</width>
-    <scripts>
-      <script file="EmbeddedPy">
-        <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
-#print 'Hello'
-# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))
-#ipaddr = PVUtil.getString(pvs[0])
-#print ipaddr
-widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
-]]></text>
-        <pv_name>$(P):$(DEV)-IPaddr</pv_name>
-      </script>
-    </scripts>
+    <width>240</width>
     <tooltip>Gives full controll over the instrument.</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
@@ -305,5 +299,55 @@ widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
     <pv_name>$(P):$(DEV)-IPaddr</pv_name>
     <x>120</x>
     <y>500</y>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>490</x>
+    <y>260</y>
+    <width>390</width>
+    <height>260</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pvInt0==0">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://$(P):$(DEV)-visible</pv_name>
+      </rule>
+    </rules>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Web Interface</text>
+      <x>10</x>
+      <width>370</width>
+      <height>30</height>
+      <font>
+        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="webbrowser" version="2.0.0">
+      <name>Web Browser</name>
+      <y>30</y>
+      <width>390</width>
+      <height>230</height>
+      <show_toolbar>false</show_toolbar>
+      <rules>
+        <rule name="url" prop_id="url" out_exp="true">
+          <exp bool_exp="True">
+            <expression>'http://'+pvStr0</expression>
+          </exp>
+          <pv_name>$(P):$(DEV)-IPaddr</pv_name>
+        </rule>
+        <rule name="Visibility" prop_id="visible" out_exp="false">
+          <exp bool_exp="pvInt0==0">
+            <value>false</value>
+          </exp>
+          <pv_name>loc://$(P):$(DEV)-visible</pv_name>
+        </rule>
+      </rules>
+    </widget>
   </widget>
 </display>
