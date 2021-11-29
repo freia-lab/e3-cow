@@ -1224,7 +1224,7 @@ widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
     <style>3</style>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_145</name>
-      <file>adc-chan.bob</file>
+      <file>adc-chan_exp.bob</file>
       <width>405</width>
       <height>40</height>
     </widget>
@@ -1268,7 +1268,7 @@ widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
     <style>3</style>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_146</name>
-      <file>adc-chan.bob</file>
+      <file>adc-chan_exp.bob</file>
       <width>405</width>
       <height>40</height>
     </widget>
@@ -1312,7 +1312,7 @@ widget.getPropertyValue("macros").add("URL", PVUtil.getString(pvs[0]))
     <style>3</style>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_147</name>
-      <file>adc-chan.bob</file>
+      <file>adc-chan_exp.bob</file>
       <width>405</width>
       <height>40</height>
     </widget>

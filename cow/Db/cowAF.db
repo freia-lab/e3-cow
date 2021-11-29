@@ -1659,7 +1659,7 @@ record(longin, "$(PREFIX)-LHe:PT660-VAL-RB")
 
 #record(bi, "$(PREFIX)-Vac:PT005")
 #{
-#        field(DESC, "ADC channel 7")
+#        field(DESC, "ADC channel 7 (Pi)")
 #}
 
 record(bi, "$(PREFIX)-Vac:PT005-WRN-RB")
@@ -1873,7 +1873,7 @@ record(ai, "$(PREFIX)-Vac:PT005")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(DESC, "ADC channel 7")
+	field(DESC, "ADC channel 7 (Pi)")
 	field(INP, "@PLCAF/308+38 T=REAL32" )
 	field(MDEL, "-1")
 	field(PREC, "2")
@@ -1895,7 +1895,7 @@ record(longin, "$(PREFIX)-Vac:PT005-VAL-RB")
 
 #record(bi, "$(PREFIX)-Vac:PT004")
 #{
-#        field(DESC, "ADC channel 6")
+#        field(DESC, "ADC channel 6 (Pi)")
 #}
 
 record(bi, "$(PREFIX)-Vac:PT004-WRN-RB")
@@ -2109,7 +2109,7 @@ record(ai, "$(PREFIX)-Vac:PT004")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(DESC, "ADC channel 6")
+	field(DESC, "ADC channel 6 (Pi)")
 	field(INP, "@PLCAF/352+38 T=REAL32" )
 	field(MDEL, "-1")
 	field(PREC, "2")
@@ -2131,7 +2131,7 @@ record(longin, "$(PREFIX)-Vac:PT004-VAL-RB")
 
 #record(bi, "$(PREFIX)-Vac:PT003")
 #{
-#        field(DESC, "ADC channel 5")
+#        field(DESC, "ADC channel 5 (Pe)")
 #}
 
 record(bi, "$(PREFIX)-Vac:PT003-WRN-RB")
@@ -2345,7 +2345,7 @@ record(ai, "$(PREFIX)-Vac:PT003")
 {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
-	field(DESC, "ADC channel 5")
+	field(DESC, "ADC channel 5 (Pe)")
 	field(INP, "@PLCAF/396+38 T=REAL32" )
 	field(MDEL, "-1")
 	field(PREC, "2")

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(PREFIX)$(SUBS):$(D)-INT-RB</pv_name>
+    <x>4</x>
+    <y>4</y>
+    <width>394</width>
+    <height>32</height>
+    <off_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </on_color>
+    <line_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </line_color>
+    <square>true</square>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(L)</text>
+    <x>5</x>
+    <y>10</y>
+    <width>85</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(PREFIX)$(SUBS):$(D)</pv_name>
+    <x>90</x>
+    <y>10</y>
+    <format>2</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PREFIX)$(SUBS):$(D).DESC</pv_name>
+    <x>200</x>
+    <y>10</y>
+    <width>195</width>
+  </widget>
+</display>

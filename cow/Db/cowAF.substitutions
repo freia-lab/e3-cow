@@ -18,9 +18,9 @@ file "cowAFR.template"
 		 {-LHe,	 TT641B,	176,    2,    "K",	"PT100"}
 		 {-LHe,	 TT641C,	220,   	2,    "K",	"PT100"}
 		 {-LHe,	 PT660,	264,   	1,    "mbar",	"Brooks pressure gauge"}
-		 {-Vac,	 PT005,	308,    2,    "mbar",	"ADC channel 7"}
-		 {-Vac,	 PT004,	352,    2,    "mbar",	"ADC channel 6"}
-		 {-Vac,	 PT003,	396,    2,    "mbar",	"ADC channel 5"}
+		 {-Vac,	 PT005,	308,    2,    "mbar",	"ADC channel 7 (Pi)"}
+		 {-Vac,	 PT004,	352,    2,    "mbar",	"ADC channel 6 (Pi)"}
+		 {-Vac,	 PT003,	396,    2,    "mbar",	"ADC channel 5 (Pe)"}
 		 {-LHe,	 ADC:CH3,	440   	2,    "C",	"ADC channel 3"}
 		 {-LHe,	 RFS-Oil-110:TT,	484,    	2,    "C",	"Oil tank temperature"}
 }
