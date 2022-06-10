@@ -125,7 +125,7 @@ $(pv_value)</tooltip>
     <text>TT740</text>
     <x>545</x>
     <y>109</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -210,7 +210,7 @@ $(pv_value)</tooltip>
     <text>TT749</text>
     <x>439</x>
     <y>715</y>
-    <width>36</width>
+    <width>50</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -322,7 +322,7 @@ $(pv_value)</tooltip>
     <text>TT742B</text>
     <x>865</x>
     <y>801</y>
-    <width>45</width>
+    <width>50</width>
     <height>18</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -378,7 +378,7 @@ $(pv_value)</tooltip>
     <text>TT742C</text>
     <x>984</x>
     <y>802</y>
-    <width>44</width>
+    <width>50</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -434,7 +434,7 @@ $(pv_value)</tooltip>
     <text>TT644</text>
     <x>1151</x>
     <y>739</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -461,7 +461,7 @@ $(pv_value)</tooltip>
     <text>TT642</text>
     <x>699</x>
     <y>366</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -518,7 +518,7 @@ $(pv_value)</tooltip>
     <text>TT745</text>
     <x>640</x>
     <y>251</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -575,7 +575,7 @@ $(pv_value)</tooltip>
     <text>TT753</text>
     <x>640</x>
     <y>288</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -712,7 +712,7 @@ $(pv_value)</tooltip>
       <text>PT003</text>
       <x>44</x>
       <y>4</y>
-      <width>37</width>
+      <width>50</width>
       <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -739,7 +739,7 @@ $(pv_value)</tooltip>
       <text>PT004</text>
       <x>44</x>
       <y>41</y>
-      <width>37</width>
+      <width>50</width>
       <height>18</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -844,7 +844,7 @@ $(pv_value)</tooltip>
     </macros>
     <x>420</x>
     <y>182</y>
-    <width>45</width>
+    <width>52</width>
     <height>35</height>
     <style>3</style>
     <foreground_color>
@@ -896,8 +896,7 @@ $(pv_value)</tooltip>
     <widget type="label" version="2.0.0">
       <name>Label Template_127</name>
       <text>TS$(HTR_NO)</text>
-      <x>1</x>
-      <width>36</width>
+      <width>45</width>
       <height>19</height>
       <font>
         <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -999,7 +998,7 @@ $(pv_value)</tooltip>
     <text>PT660</text>
     <x>1098</x>
     <y>59</y>
-    <width>53</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -1108,7 +1107,7 @@ $(pv_value)</tooltip>
     <text>TT751</text>
     <x>1180</x>
     <y>518</y>
-    <width>36</width>
+    <width>40</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -1476,7 +1475,7 @@ $(pv_value)</tooltip>
     <text>TT741B</text>
     <x>804</x>
     <y>630</y>
-    <width>45</width>
+    <width>50</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -1532,7 +1531,7 @@ $(pv_value)</tooltip>
     <text>TT741C</text>
     <x>804</x>
     <y>663</y>
-    <width>44</width>
+    <width>50</width>
     <height>19</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
@@ -1643,11 +1642,11 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
-    <text>Tempeature sensors 
+    <text>Temperature sensors 
 on DUT</text>
     <x>1320</x>
     <y>430</y>
-    <width>161</width>
+    <width>168</width>
     <height>55</height>
     <font>
       <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
@@ -2520,7 +2519,7 @@ $(pv_value)</tooltip>
     <text>Pe</text>
     <x>371</x>
     <y>820</y>
-    <width>15</width>
+    <width>20</width>
     <height>18</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
